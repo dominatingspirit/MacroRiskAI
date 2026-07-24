@@ -1,0 +1,126 @@
+feature,importance,kind
+Equity,481.0,native_importance
+Total Assets,478.0,native_importance
+Total Liabilities,334.0,native_importance
+Borrowings,294.0,native_importance
+Net Cash Flow,280.0,native_importance
+repo_x_total_assets,280.0,native_importance
+Total Liabilities_lag1,279.0,native_importance
+CFO,257.0,native_importance
+CFI,221.0,native_importance
+CFF,215.0,native_importance
+repo_x_borrowings,201.0,native_importance
+Net Profit,183.0,native_importance
+Equity_lag1,180.0,native_importance
+Total Assets_qoq_growth,172.0,native_importance
+Sales_qoq_growth,148.0,native_importance
+Equity_lag2,146.0,native_importance
+Total Assets_lag1,145.0,native_importance
+Borrowings_lag1,143.0,native_importance
+Net Profit_qoq_growth,141.0,native_importance
+CFO_qoq_growth,125.0,native_importance
+Expenses,122.0,native_importance
+Operating Profit,121.0,native_importance
+Operating Profit_qoq_growth,120.0,native_importance
+cpi_infl_x_sales,117.0,native_importance
+Borrowings_qoq_growth,116.0,native_importance
+Total Assets_roll4_std,114.0,native_importance
+Net Cash Flow_lag1,107.0,native_importance
+Net Profit_roll4_std,104.0,native_importance
+CFI_lag1,103.0,native_importance
+Sales_qoq_growth_lag1,103.0,native_importance
+Sales_roll4_std,101.0,native_importance
+Borrowings_roll4_std,99.0,native_importance
+CFF_lag1,98.0,native_importance
+Total Assets_qoq_growth_lag1,96.0,native_importance
+CFO_roll4_std,93.0,native_importance
+Borrowings_qoq_growth_lag1,92.0,native_importance
+Operating Profit_qoq_growth_lag1,86.0,native_importance
+CFO_qoq_growth_lag1,81.0,native_importance
+Sales,77.0,native_importance
+Total Liabilities_lag2,76.0,native_importance
+CFO_lag1,72.0,native_importance
+Net Profit_qoq_growth_lag1,72.0,native_importance
+Total Assets_lag2,70.0,native_importance
+Equity_lag4,68.0,native_importance
+oil_x_sales,68.0,native_importance
+Borrowings_lag2,67.0,native_importance
+CFI_lag2,66.0,native_importance
+Net Profit_lag1,64.0,native_importance
+Net Cash Flow_lag2,63.0,native_importance
+Operating Profit_roll4_std,62.0,native_importance
+CFO_lag2,56.0,native_importance
+Total Assets_lag4,55.0,native_importance
+CFF_lag4,55.0,native_importance
+Total Liabilities_lag4,53.0,native_importance
+fx_x_sales,53.0,native_importance
+Borrowings_lag4,52.0,native_importance
+Borrowings_roll4_mean,49.0,native_importance
+CFF_lag2,49.0,native_importance
+Total Assets_roll4_mean,48.0,native_importance
+CFO_yoy_growth,48.0,native_importance
+Sales_lag1,44.0,native_importance
+Operating Profit_lag4,44.0,native_importance
+Operating Profit_lag1,44.0,native_importance
+Total Assets_roll4_median,44.0,native_importance
+Expenses_lag1,43.0,native_importance
+Total Assets_roll4_growth,42.0,native_importance
+CFO_roll4_mean,41.0,native_importance
+Operating Profit_lag2,41.0,native_importance
+Net Profit_lag2,41.0,native_importance
+Net Cash Flow_lag4,38.0,native_importance
+Sales_roll4_growth,37.0,native_importance
+Total Assets_yoy_growth,36.0,native_importance
+CFO_roll4_median,34.0,native_importance
+Net Profit_yoy_growth,34.0,native_importance
+Borrowings_yoy_growth,33.0,native_importance
+Borrowings_roll4_median,32.0,native_importance
+Net Profit_lag4,32.0,native_importance
+Net Profit_roll4_growth,31.0,native_importance
+Operating Profit_yoy_growth,31.0,native_importance
+CFO_roll4_growth,30.0,native_importance
+Sales_yoy_growth,29.0,native_importance
+Operating Profit_roll4_median,27.0,native_importance
+Operating Profit_roll4_growth,26.0,native_importance
+CFI_lag4,26.0,native_importance
+CFO_lag4,21.0,native_importance
+Operating Profit_roll4_mean,20.0,native_importance
+Sales_lag2,19.0,native_importance
+Net Profit_roll4_mean,18.0,native_importance
+Borrowings_roll4_growth,17.0,native_importance
+Sales_roll4_mean,17.0,native_importance
+Expenses_lag2,17.0,native_importance
+Net Profit_roll4_median,16.0,native_importance
+Sales_lag4,15.0,native_importance
+Expenses_lag4,12.0,native_importance
+Repo_Rate_lag1,10.0,native_importance
+CPI_Inflation_Rate_lag1,5.0,native_importance
+exchange_rate_lag1,4.0,native_importance
+CPI_Combined_Index,4.0,native_importance
+Sales_roll4_median,4.0,native_importance
+Repo_Rate,4.0,native_importance
+Reverse_Repo_Rate_lag1,3.0,native_importance
+CPI_Inflation_Rate,3.0,native_importance
+oil_price,3.0,native_importance
+Reverse_Repo_Rate,2.0,native_importance
+Sector_Auto,2.0,native_importance
+oil_price_lag1,2.0,native_importance
+Sector_Banking,1.0,native_importance
+Sector_Energy,1.0,native_importance
+CPI_Combined_Index_lag1,1.0,native_importance
+CPI_Combined_Index_lag4,0.0,native_importance
+Quarter_Q1,0.0,native_importance
+exchange_rate,0.0,native_importance
+WPI,0.0,native_importance
+Quarter_Q2,0.0,native_importance
+Quarter_Q4,0.0,native_importance
+Quarter_Q3,0.0,native_importance
+oil_price_lag4,0.0,native_importance
+CPI_Inflation_Rate_lag4,0.0,native_importance
+Reverse_Repo_Rate_lag4,0.0,native_importance
+WPI_lag1,0.0,native_importance
+WPI_lag4,0.0,native_importance
+exchange_rate_lag4,0.0,native_importance
+Repo_Rate_lag4,0.0,native_importance
+Sector_FMCG,0.0,native_importance
+Sector_Tech,0.0,native_importance

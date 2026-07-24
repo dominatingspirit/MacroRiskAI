@@ -1,0 +1,620 @@
+{
+  "generation": {
+    "companies_per_sector": 113,
+    "n_sectors": 5,
+    "n_companies": 565,
+    "n_quarters": 8,
+    "n_synth_rows": 4520,
+    "selected_iteration": 1,
+    "selected_noise_scale": 1.0
+  },
+  "refine_history": [
+    {
+      "iteration": 1,
+      "noise_scale": 1.0,
+      "summary": {
+        "median_ks": 0.0684,
+        "max_ks": 0.08,
+        "mean_wasserstein_std": 0.10659166666666668,
+        "corr_mae": 0.0595,
+        "corr_frobenius": 0.914,
+        "cov_frobenius_standardized": 0.9415
+      },
+      "acceptance": {
+        "accepted": true,
+        "checks": {
+          "median_ks": true,
+          "max_ks": true,
+          "mean_wasserstein_std": true,
+          "corr_mae": true
+        },
+        "score": 0.2505
+      }
+    }
+  ],
+  "final_evaluation": {
+    "n_real": 160,
+    "n_synth": 4520,
+    "summary": {
+      "median_ks": 0.0684,
+      "max_ks": 0.08,
+      "mean_wasserstein_std": 0.10659166666666668,
+      "corr_mae": 0.0595,
+      "corr_frobenius": 0.914,
+      "cov_frobenius_standardized": 0.9415
+    },
+    "acceptance": {
+      "accepted": true,
+      "checks": {
+        "median_ks": true,
+        "max_ks": true,
+        "mean_wasserstein_std": true,
+        "corr_mae": true
+      },
+      "score": 0.2505
+    },
+    "ks_statistics": {
+      "Sales": {
+        "ks_stat": 0.0702,
+        "p_value": 0.4118
+      },
+      "Expenses": {
+        "ks_stat": 0.0607,
+        "p_value": 0.5981
+      },
+      "Operating Profit": {
+        "ks_stat": 0.0611,
+        "p_value": 0.5901
+      },
+      "Net Profit": {
+        "ks_stat": 0.0645,
+        "p_value": 0.5202
+      },
+      "Total Assets": {
+        "ks_stat": 0.067,
+        "p_value": 0.4717
+      },
+      "Equity": {
+        "ks_stat": 0.058,
+        "p_value": 0.6537
+      },
+      "Borrowings": {
+        "ks_stat": 0.08,
+        "p_value": 0.2612
+      },
+      "Total Liabilities": {
+        "ks_stat": 0.0747,
+        "p_value": 0.3372
+      },
+      "CFO": {
+        "ks_stat": 0.0657,
+        "p_value": 0.4973
+      },
+      "CFI": {
+        "ks_stat": 0.0769,
+        "p_value": 0.3039
+      },
+      "CFF": {
+        "ks_stat": 0.0749,
+        "p_value": 0.3346
+      },
+      "Net Cash Flow": {
+        "ks_stat": 0.0698,
+        "p_value": 0.4196
+      }
+    },
+    "wasserstein": {
+      "Sales": {
+        "wasserstein": 5293.92,
+        "wasserstein_std": 0.0734
+      },
+      "Expenses": {
+        "wasserstein": 4653.599,
+        "wasserstein_std": 0.072
+      },
+      "Operating Profit": {
+        "wasserstein": 1014.3038,
+        "wasserstein_std": 0.1089
+      },
+      "Net Profit": {
+        "wasserstein": 893.1155,
+        "wasserstein_std": 0.1283
+      },
+      "Total Assets": {
+        "wasserstein": 85614.4526,
+        "wasserstein_std": 0.0969
+      },
+      "Equity": {
+        "wasserstein": 24261.7794,
+        "wasserstein_std": 0.0626
+      },
+      "Borrowings": {
+        "wasserstein": 87201.1176,
+        "wasserstein_std": 0.1547
+      },
+      "Total Liabilities": {
+        "wasserstein": 107506.6378,
+        "wasserstein_std": 0.146
+      },
+      "CFO": {
+        "wasserstein": 2128.9085,
+        "wasserstein_std": 0.1172
+      },
+      "CFI": {
+        "wasserstein": 993.1556,
+        "wasserstein_std": 0.0958
+      },
+      "CFF": {
+        "wasserstein": 421.9902,
+        "wasserstein_std": 0.1081
+      },
+      "Net Cash Flow": {
+        "wasserstein": 592.6906,
+        "wasserstein_std": 0.1152
+      }
+    },
+    "correlation": {
+      "mae": 0.0595,
+      "max_abs_diff": 0.1901,
+      "frobenius": 0.914,
+      "features": [
+        "Sales",
+        "Expenses",
+        "Operating Profit",
+        "Net Profit",
+        "Total Assets",
+        "Equity",
+        "Borrowings",
+        "Total Liabilities",
+        "CFO",
+        "CFI",
+        "CFF",
+        "Net Cash Flow"
+      ]
+    },
+    "covariance": {
+      "frobenius": 0.9415,
+      "max_abs_diff": 0.1951
+    },
+    "pca": {
+      "explained_variance_ratio_top5": [
+        0.7451,
+        0.1851,
+        0.0319,
+        0.0304,
+        0.005
+      ],
+      "pc_centroid_distance": 0.2511,
+      "real_pc_std": [
+        2.99,
+        1.491
+      ],
+      "synth_pc_std": [
+        3.087,
+        1.375
+      ],
+      "figure": "pca_projection.png"
+    },
+    "feature_distributions": {
+      "Sales": {
+        "real": {
+          "mean": 88649.08,
+          "std": 72366.12,
+          "min": 14601.05,
+          "p25": 37952.79,
+          "median": 63016.08,
+          "p75": 125665.21,
+          "max": 283463.84,
+          "skew": 1.103
+        },
+        "synth": {
+          "mean": 93867.81,
+          "std": 77283.63,
+          "min": 14098.03,
+          "p25": 39792.28,
+          "median": 66171.2,
+          "p75": 134870.82,
+          "max": 328345.03,
+          "skew": 1.13
+        }
+      },
+      "Expenses": {
+        "real": {
+          "mean": 73477.71,
+          "std": 64819.64,
+          "min": 10156.85,
+          "p25": 29730.19,
+          "median": 47070.67,
+          "p75": 104170.35,
+          "max": 252524.61,
+          "skew": 1.166
+        },
+        "synth": {
+          "mean": 77712.89,
+          "std": 69093.25,
+          "min": 8515.16,
+          "p25": 30787.62,
+          "median": 48985.78,
+          "p75": 111984.97,
+          "max": 303006.94,
+          "skew": 1.197
+        }
+      },
+      "Operating Profit": {
+        "real": {
+          "mean": 15171.37,
+          "std": 9340.01,
+          "min": 2818.45,
+          "p25": 6834.39,
+          "median": 14787.42,
+          "p75": 20582.01,
+          "max": 40362.45,
+          "skew": 0.645
+        },
+        "synth": {
+          "mean": 16154.92,
+          "std": 10388.84,
+          "min": 2295.07,
+          "p25": 7365.11,
+          "median": 14977.18,
+          "p75": 21706.96,
+          "max": 69867.65,
+          "skew": 0.94
+        }
+      },
+      "Net Profit": {
+        "real": {
+          "mean": 11327.12,
+          "std": 6980.41,
+          "min": 2113.84,
+          "p25": 5038.86,
+          "median": 11301.6,
+          "p75": 15436.5,
+          "max": 30271.84,
+          "skew": 0.653
+        },
+        "synth": {
+          "mean": 12150.57,
+          "std": 8107.08,
+          "min": 1401.93,
+          "p25": 5515.94,
+          "median": 11107.98,
+          "p75": 16274.91,
+          "max": 48734.04,
+          "skew": 1.07
+        }
+      },
+      "Total Assets": {
+        "real": {
+          "mean": 630488.02,
+          "std": 886091.67,
+          "min": 62766.64,
+          "p25": 118688.98,
+          "median": 259006.78,
+          "p75": 675594.15,
+          "max": 3593943.23,
+          "skew": 2.129
+        },
+        "synth": {
+          "mean": 623601.19,
+          "std": 922789.63,
+          "min": 48357.47,
+          "p25": 114843.9,
+          "median": 255597.0,
+          "p75": 682559.79,
+          "max": 6406663.46,
+          "skew": 2.882
+        }
+      },
+      "Equity": {
+        "real": {
+          "mean": 285716.45,
+          "std": 388739.53,
+          "min": 31000.34,
+          "p25": 48987.96,
+          "median": 125704.4,
+          "p75": 322034.51,
+          "max": 1815136.01,
+          "skew": 2.116
+        },
+        "synth": {
+          "mean": 286235.14,
+          "std": 405429.06,
+          "min": 22958.42,
+          "p25": 53075.99,
+          "median": 118896.43,
+          "p75": 318971.61,
+          "max": 2832502.97,
+          "skew": 2.614
+        }
+      },
+      "Borrowings": {
+        "real": {
+          "mean": 282369.68,
+          "std": 565316.16,
+          "min": 16414.1,
+          "p25": 31423.65,
+          "median": 75823.71,
+          "p75": 186646.39,
+          "max": 2336063.1,
+          "skew": 2.756
+        },
+        "synth": {
+          "mean": 208227.19,
+          "std": 380930.64,
+          "min": 8591.82,
+          "p25": 34674.41,
+          "median": 75041.92,
+          "p75": 194305.56,
+          "max": 3154895.78,
+          "skew": 3.921
+        }
+      },
+      "Total Liabilities": {
+        "real": {
+          "mean": 417989.78,
+          "std": 738802.04,
+          "min": 31383.32,
+          "p25": 59344.49,
+          "median": 129503.39,
+          "p75": 337797.07,
+          "max": 3054851.75,
+          "skew": 2.585
+        },
+        "synth": {
+          "mean": 337366.04,
+          "std": 533117.16,
+          "min": 19795.03,
+          "p25": 62100.11,
+          "median": 133271.15,
+          "p75": 348060.61,
+          "max": 4391504.87,
+          "skew": 3.325
+        }
+      },
+      "CFO": {
+        "real": {
+          "mean": 21635.5,
+          "std": 18219.99,
+          "min": 3370.25,
+          "p25": 6761.91,
+          "median": 16348.3,
+          "p75": 26194.43,
+          "max": 74119.56,
+          "skew": 1.283
+        },
+        "synth": {
+          "mean": 23026.34,
+          "std": 20636.66,
+          "min": 2356.76,
+          "p25": 7607.89,
+          "median": 16746.4,
+          "p75": 30941.9,
+          "max": 125502.96,
+          "skew": 1.612
+        }
+      },
+      "CFI": {
+        "real": {
+          "mean": -12387.8,
+          "std": 10400.01,
+          "min": -50283.7,
+          "p25": -16184.03,
+          "median": -9862.2,
+          "p75": -4054.2,
+          "max": -1554.46,
+          "skew": -1.287
+        },
+        "synth": {
+          "mean": -13117.18,
+          "std": 11893.27,
+          "min": -85097.44,
+          "p25": -17485.01,
+          "median": -9358.9,
+          "p75": -4376.55,
+          "max": -976.64,
+          "skew": -1.763
+        }
+      },
+      "CFF": {
+        "real": {
+          "mean": -4489.15,
+          "std": 3917.45,
+          "min": -19878.02,
+          "p25": -5671.05,
+          "median": -3422.97,
+          "p75": -1414.41,
+          "max": -458.67,
+          "skew": -1.355
+        },
+        "synth": {
+          "mean": -4867.74,
+          "std": 4665.4,
+          "min": -36348.21,
+          "p25": -6200.81,
+          "median": -3435.34,
+          "p75": -1570.34,
+          "max": -264.6,
+          "skew": -1.888
+        }
+      },
+      "Net Cash Flow": {
+        "real": {
+          "mean": 4758.55,
+          "std": 5159.54,
+          "min": 249.31,
+          "p25": 1384.88,
+          "median": 3269.66,
+          "p75": 5430.77,
+          "max": 27582.54,
+          "skew": 2.444
+        },
+        "synth": {
+          "mean": 5041.41,
+          "std": 5960.52,
+          "min": -10122.37,
+          "p25": 1339.9,
+          "median": 2907.01,
+          "p75": 6383.69,
+          "max": 46303.81,
+          "skew": 2.345
+        }
+      }
+    },
+    "target_distributions": {
+      "Sales": {
+        "ks_stat": 0.0702,
+        "wasserstein_std": 0.0734,
+        "real_mean": 88649.08,
+        "synth_mean": 93867.81,
+        "real_median": 63016.08,
+        "synth_median": 66171.2
+      },
+      "Operating Profit": {
+        "ks_stat": 0.0611,
+        "wasserstein_std": 0.1089,
+        "real_mean": 15171.37,
+        "synth_mean": 16154.92,
+        "real_median": 14787.42,
+        "synth_median": 14977.18
+      },
+      "Net Profit": {
+        "ks_stat": 0.0645,
+        "wasserstein_std": 0.1283,
+        "real_mean": 11327.12,
+        "synth_mean": 12150.57,
+        "real_median": 11301.6,
+        "synth_median": 11107.98
+      },
+      "Borrowings": {
+        "ks_stat": 0.08,
+        "wasserstein_std": 0.1547,
+        "real_mean": 282369.68,
+        "synth_mean": 208227.19,
+        "real_median": 75823.71,
+        "synth_median": 75041.92
+      },
+      "Total Assets": {
+        "ks_stat": 0.067,
+        "wasserstein_std": 0.0969,
+        "real_mean": 630488.02,
+        "synth_mean": 623601.19,
+        "real_median": 259006.78,
+        "synth_median": 255597.0
+      },
+      "CFO": {
+        "ks_stat": 0.0657,
+        "wasserstein_std": 0.1172,
+        "real_mean": 21635.5,
+        "synth_mean": 23026.34,
+        "real_median": 16348.3,
+        "synth_median": 16746.4
+      }
+    },
+    "sector_distribution": {
+      "distribution": {
+        "Auto": {
+          "real_pct": 20.0,
+          "synth_pct": 20.0
+        },
+        "Banking": {
+          "real_pct": 20.0,
+          "synth_pct": 20.0
+        },
+        "Energy": {
+          "real_pct": 20.0,
+          "synth_pct": 20.0
+        },
+        "FMCG": {
+          "real_pct": 20.0,
+          "synth_pct": 20.0
+        },
+        "Tech": {
+          "real_pct": 20.0,
+          "synth_pct": 20.0
+        }
+      },
+      "max_pct_gap": 0.0
+    },
+    "quarterly_distribution": {
+      "distribution": {
+        "Q1 2024": {
+          "real_pct": 12.5,
+          "synth_pct": 12.5
+        },
+        "Q1 2025": {
+          "real_pct": 12.5,
+          "synth_pct": 12.5
+        },
+        "Q2 2024": {
+          "real_pct": 12.5,
+          "synth_pct": 12.5
+        },
+        "Q2 2025": {
+          "real_pct": 12.5,
+          "synth_pct": 12.5
+        },
+        "Q3 2024": {
+          "real_pct": 12.5,
+          "synth_pct": 12.5
+        },
+        "Q3 2025": {
+          "real_pct": 12.5,
+          "synth_pct": 12.5
+        },
+        "Q4 2024": {
+          "real_pct": 12.5,
+          "synth_pct": 12.5
+        },
+        "Q4 2025": {
+          "real_pct": 12.5,
+          "synth_pct": 12.5
+        }
+      },
+      "max_pct_gap": 0.0
+    }
+  },
+  "structural_validation": {
+    "all_checks_passed": true,
+    "checks": {
+      "synthetic_accounting_identities": {
+        "passed": true,
+        "identities": {
+          "operating_profit_identity": {
+            "formula": "Operating Profit = Sales - Expenses",
+            "rows_violated": 0,
+            "max_relative_diff": 4.36e-06
+          },
+          "net_cash_flow_identity": {
+            "formula": "Net Cash Flow = CFO + CFI + CFF",
+            "rows_violated": 0,
+            "max_relative_diff": 0.00341297
+          },
+          "balance_sheet_identity": {
+            "formula": "Total Assets = Equity + Total Liabilities",
+            "rows_violated": 0,
+            "max_relative_diff": 1.7e-07
+          }
+        }
+      },
+      "macro_join_complete": {
+        "passed": true,
+        "macro_null_cells": 0,
+        "null_by_variable": {}
+      },
+      "macro_coherence": {
+        "reverse_repo_below_repo": true,
+        "max_repo_quarterly_move": 0.2,
+        "max_oil_quarterly_pct_move": 0.0489,
+        "max_fx_quarterly_pct_move": 0.0037,
+        "cpi_index_wpi_correlation": 0.9992,
+        "ranges_sane": true,
+        "passed": true
+      },
+      "provenance_flags_present": {
+        "passed": true,
+        "missing_flags": []
+      }
+    }
+  }
+}

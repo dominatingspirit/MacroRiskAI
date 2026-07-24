@@ -1,0 +1,98 @@
+{
+  "shape": {
+    "rows": 4680,
+    "columns": 31
+  },
+  "dtypes": {
+    "Company": "object",
+    "Ticker": "object",
+    "Sector": "object",
+    "Year": "int64",
+    "Quarter": "object",
+    "Period": "object",
+    "quarter_num": "int64",
+    "time_index": "int64",
+    "source": "object",
+    "Sales": "float64",
+    "Expenses": "float64",
+    "Operating Profit": "float64",
+    "Net Profit": "float64",
+    "Total Assets": "float64",
+    "Equity": "float64",
+    "Borrowings": "float64",
+    "Total Liabilities": "float64",
+    "CFO": "float64",
+    "CFI": "float64",
+    "CFF": "float64",
+    "Net Cash Flow": "float64",
+    "is_synthetic_company": "bool",
+    "CPI_Combined_Index": "float64",
+    "CPI_Inflation_Rate": "float64",
+    "WPI": "float64",
+    "Repo_Rate": "float64",
+    "Reverse_Repo_Rate": "float64",
+    "oil_price": "float64",
+    "exchange_rate": "float64",
+    "macro_source": "object",
+    "macro_is_synthetic": "bool"
+  },
+  "missing_values": {
+    "total_missing_cells": 0,
+    "columns_with_missing": {}
+  },
+  "duplicates": {
+    "full_row_duplicates": 0,
+    "panel_key": [
+      "source",
+      "Company",
+      "time_index"
+    ],
+    "duplicate_entity_quarter_records": 0
+  },
+  "invalid_numeric": {
+    "columns_checked_for_negativity": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "Total Assets",
+      "Equity",
+      "Total Liabilities",
+      "Borrowings"
+    ],
+    "unexpected_negatives": {}
+  },
+  "infinite_values": {
+    "columns_with_infinities": {},
+    "total": 0
+  },
+  "categorical_consistency": {
+    "unique_values": {
+      "Sector": [
+        "Auto",
+        "Banking",
+        "Energy",
+        "FMCG",
+        "Tech"
+      ],
+      "Quarter": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "source": [
+        "mock",
+        "real",
+        "synthetic"
+      ],
+      "macro_source": [
+        "synthetic_placeholder"
+      ]
+    },
+    "issues": []
+  },
+  "datatype_consistency": {
+    "wrong_dtype_columns": {},
+    "all_consistent": true
+  }
+}

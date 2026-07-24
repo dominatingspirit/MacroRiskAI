@@ -1,0 +1,126 @@
+feature,importance,kind
+repo_x_total_assets,0.7305140495300293,native_importance
+Total Assets,0.24389323592185974,native_importance
+Equity,0.003991349134594202,native_importance
+repo_x_borrowings,0.003789676120504737,native_importance
+Total Assets_lag2,0.0016045839292928576,native_importance
+Borrowings_roll4_mean,0.0014932064805179834,native_importance
+Total Liabilities,0.0009675787296146154,native_importance
+Total Assets_roll4_median,0.0006282337126322091,native_importance
+Total Liabilities_lag4,0.0005296870367601514,native_importance
+Total Assets_roll4_mean,0.0005189233925193548,native_importance
+CFO_roll4_mean,0.0004360108869150281,native_importance
+Operating Profit_yoy_growth,0.0004007627721875906,native_importance
+Expenses_lag1,0.00039643532363697886,native_importance
+CFF_lag2,0.0003679156943690032,native_importance
+Borrowings_lag4,0.000344355299603194,native_importance
+Equity_lag2,0.0003325288707856089,native_importance
+Total Assets_roll4_growth,0.00029519788222387433,native_importance
+Net Profit_roll4_mean,0.00028895511059090495,native_importance
+Sales_lag2,0.00027081079315394163,native_importance
+Total Assets_yoy_growth,0.00025307960459031165,native_importance
+CFO_lag2,0.00023681207676418126,native_importance
+CFO_roll4_median,0.00022969424026086926,native_importance
+Net Profit_lag2,0.00022947452089283615,native_importance
+CFO_lag1,0.0002212454128311947,native_importance
+fx_x_sales,0.00021452648798003793,native_importance
+Expenses_lag4,0.00021120149176567793,native_importance
+oil_price,0.00020889192819595337,native_importance
+Net Profit_roll4_median,0.00019303800945635885,native_importance
+Borrowings_lag2,0.00019076612079516053,native_importance
+Net Profit_roll4_std,0.00018898214329965413,native_importance
+CFI_lag4,0.00018896478286478668,native_importance
+Equity_lag1,0.00018583182827569544,native_importance
+cpi_infl_x_sales,0.00018532088142819703,native_importance
+CFF_lag4,0.00017716606089379638,native_importance
+Expenses,0.00017672698595561087,native_importance
+Borrowings_roll4_growth,0.0001751761301420629,native_importance
+oil_price_lag1,0.00016267650062218308,native_importance
+Total Assets_lag1,0.00014758117322344333,native_importance
+Net Profit_lag1,0.0001449704432161525,native_importance
+CFO_roll4_growth,0.00014178849232848734,native_importance
+Borrowings_lag1,0.00013923548976890743,native_importance
+CFO_roll4_std,0.00013708267943002284,native_importance
+CFF_lag1,0.00013199495151638985,native_importance
+Equity_lag4,0.00013037129247095436,native_importance
+Total Liabilities_lag1,0.00012957931903656572,native_importance
+Operating Profit_qoq_growth_lag1,0.0001295072288485244,native_importance
+CFO_qoq_growth,0.00012883139424957335,native_importance
+Sales_roll4_growth,0.00012787673040293157,native_importance
+Total Assets_lag4,0.00012455052637960762,native_importance
+CFF,0.0001195487639051862,native_importance
+CFO_yoy_growth,0.00011950845510000363,native_importance
+Net Profit_lag4,0.00011715411528712139,native_importance
+Sales_qoq_growth,0.00011329637345625088,native_importance
+Operating Profit_roll4_growth,0.00011161981092300266,native_importance
+Sales_roll4_std,0.00011002145038219169,native_importance
+Net Cash Flow_lag1,0.00010707947512855753,native_importance
+Borrowings_qoq_growth,0.00010629844473442063,native_importance
+Net Cash Flow,0.00010514838504604995,native_importance
+Net Profit_yoy_growth,0.00010027191456174478,native_importance
+Borrowings_qoq_growth_lag1,9.945796773536131e-05,native_importance
+Operating Profit_roll4_std,9.569348185323179e-05,native_importance
+Borrowings,9.505582420388237e-05,native_importance
+Total Liabilities_lag2,9.471696830587462e-05,native_importance
+Operating Profit_qoq_growth,8.988547779154032e-05,native_importance
+oil_x_sales,8.894425263861194e-05,native_importance
+Total Assets_roll4_std,8.872272883309051e-05,native_importance
+Net Profit,8.732758578844368e-05,native_importance
+Net Cash Flow_lag2,8.599025022704154e-05,native_importance
+Total Assets_qoq_growth,8.545942546334118e-05,native_importance
+Expenses_lag2,8.398317004321143e-05,native_importance
+Total Assets_qoq_growth_lag1,8.324333612108603e-05,native_importance
+Borrowings_roll4_median,8.081644773483276e-05,native_importance
+Operating Profit_roll4_mean,7.810989336576313e-05,native_importance
+CFI_lag1,7.778091094223782e-05,native_importance
+Net Profit_qoq_growth,7.45299767004326e-05,native_importance
+CFO_qoq_growth_lag1,7.320782606257126e-05,native_importance
+CFO,7.25014106137678e-05,native_importance
+CPI_Inflation_Rate,7.051911961752921e-05,native_importance
+CFI,6.930191011633724e-05,native_importance
+CFI_lag2,6.614543235627934e-05,native_importance
+Borrowings_roll4_std,6.010732613503933e-05,native_importance
+Sales_lag1,5.965964010101743e-05,native_importance
+Borrowings_yoy_growth,5.897121081943624e-05,native_importance
+Net Cash Flow_lag4,5.889508611289784e-05,native_importance
+Sales_qoq_growth_lag1,5.4586791520705447e-05,native_importance
+Net Profit_roll4_growth,5.409480581874959e-05,native_importance
+Operating Profit_lag1,5.146451439941302e-05,native_importance
+Operating Profit_lag4,4.860010449192487e-05,native_importance
+Sales_lag4,4.817728040507063e-05,native_importance
+Net Profit_qoq_growth_lag1,4.2214131099171937e-05,native_importance
+Sales,3.735873906407505e-05,native_importance
+Operating Profit_lag2,3.563363861758262e-05,native_importance
+Operating Profit,3.1897328881314024e-05,native_importance
+Repo_Rate_lag1,2.8015854695695452e-05,native_importance
+CPI_Combined_Index,2.649216548888944e-05,native_importance
+Sales_yoy_growth,2.4712293452466838e-05,native_importance
+Sales_roll4_median,1.8311446183361113e-05,native_importance
+Reverse_Repo_Rate,1.8107293726643547e-05,native_importance
+CFO_lag4,1.4397712220670655e-05,native_importance
+exchange_rate,1.1831883966806345e-05,native_importance
+Sector_Auto,9.015701834869105e-06,native_importance
+Repo_Rate,8.632158824184444e-06,native_importance
+Reverse_Repo_Rate_lag1,6.421756552299485e-06,native_importance
+exchange_rate_lag1,6.218742328201188e-06,native_importance
+Sales_roll4_mean,5.829443125549005e-06,native_importance
+CPI_Combined_Index_lag1,5.5121931836765725e-06,native_importance
+Operating Profit_roll4_median,5.295327355270274e-06,native_importance
+Quarter_Q2,4.271244506526273e-06,native_importance
+Sector_Banking,3.0385015179490438e-06,native_importance
+CPI_Inflation_Rate_lag1,2.227306140412111e-06,native_importance
+Sector_Tech,2.0403729195095366e-06,native_importance
+CPI_Inflation_Rate_lag4,1.2120398196202586e-07,native_importance
+CPI_Combined_Index_lag4,0.0,native_importance
+Quarter_Q1,0.0,native_importance
+WPI,0.0,native_importance
+Quarter_Q3,0.0,native_importance
+Quarter_Q4,0.0,native_importance
+Reverse_Repo_Rate_lag4,0.0,native_importance
+Repo_Rate_lag4,0.0,native_importance
+WPI_lag1,0.0,native_importance
+WPI_lag4,0.0,native_importance
+exchange_rate_lag4,0.0,native_importance
+oil_price_lag4,0.0,native_importance
+Sector_Energy,0.0,native_importance
+Sector_FMCG,0.0,native_importance

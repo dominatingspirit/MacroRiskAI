@@ -1,0 +1,578 @@
+[
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": 0.0305,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "ridge",
+    "mean_val_r2": 0.9984
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": 0.0136,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "lasso",
+    "mean_val_r2": 0.997
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": 0.0327,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "elastic_net",
+    "mean_val_r2": 0.9983
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": -0.9495,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "decision_tree",
+    "mean_val_r2": 0.9967
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": 0.1179,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "random_forest",
+    "mean_val_r2": 0.9982
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": 0.1221,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "extra_trees",
+    "mean_val_r2": 0.9983
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": 0.0262,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "hist_gradient_boosting",
+    "mean_val_r2": 0.9981
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": -0.0852,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "xgboost",
+    "mean_val_r2": 0.9979
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": -0.0033,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "lightgbm",
+    "mean_val_r2": 0.998
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9983,
+    "baseline_also_high": true,
+    "permutation_r2": 0.0707,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {
+      "Sales": 0.99931,
+      "fx_x_sales": 0.99926
+    },
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Sales": 0.9993,
+      "fx_x_sales": 0.9993,
+      "oil_x_sales": 0.999,
+      "cpi_infl_x_sales": 0.9972,
+      "Expenses": 0.9957,
+      "Sales_lag1": 0.9114,
+      "Expenses_lag1": 0.9053,
+      "Operating Profit": 0.8169
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Sales",
+    "model": "catboost",
+    "mean_val_r2": 0.9948
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9825,
+    "baseline_also_high": true,
+    "permutation_r2": -0.1123,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "repo_x_borrowings": 0.9919,
+      "Borrowings": 0.9918,
+      "Total Liabilities": 0.9716,
+      "Total Assets": 0.949,
+      "repo_x_total_assets": 0.949,
+      "Borrowings_lag1": 0.905,
+      "Equity": 0.8951,
+      "Total Liabilities_lag1": 0.8859
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Borrowings",
+    "model": "elastic_net",
+    "mean_val_r2": 0.9811
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.0958,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "ridge",
+    "mean_val_r2": 0.9889
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.1722,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "lasso",
+    "mean_val_r2": 0.9882
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.0586,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "elastic_net",
+    "mean_val_r2": 0.9893
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -2.2291,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "decision_tree",
+    "mean_val_r2": 0.9826
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.0938,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "random_forest",
+    "mean_val_r2": 0.9889
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.0528,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "extra_trees",
+    "mean_val_r2": 0.9892
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.0932,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "hist_gradient_boosting",
+    "mean_val_r2": 0.9881
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.3058,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "xgboost",
+    "mean_val_r2": 0.9859
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.1803,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "lightgbm",
+    "mean_val_r2": 0.9876
+  },
+  {
+    "triggered": true,
+    "naive_baseline_r2": 0.9901,
+    "baseline_also_high": true,
+    "permutation_r2": -0.1257,
+    "permutation_test_passed": true,
+    "suspicious_features_corr_ge_flag": {},
+    "genuine_concern_features": {},
+    "top_feature_target_correlations": {
+      "Total Assets": 0.9955,
+      "repo_x_total_assets": 0.9954,
+      "Total Liabilities": 0.9799,
+      "Equity": 0.9749,
+      "Borrowings": 0.951,
+      "repo_x_borrowings": 0.951,
+      "Total Assets_lag1": 0.9049,
+      "Total Liabilities_lag1": 0.8928
+    },
+    "verdict": {
+      "leakage_suspected": false,
+      "reason": "High R^2 explained by series persistence \u2014 the naive baseline is also high and the permutation test passed. Accept."
+    },
+    "target": "target_Total_Assets",
+    "model": "catboost",
+    "mean_val_r2": 0.9831
+  }
+]

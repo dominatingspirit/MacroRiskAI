@@ -1,0 +1,87 @@
+{
+  "assemble_decisions": {
+    "synthetic_companies_generated": 50,
+    "synthetic_rows_generated": 400,
+    "company_rows_total": 560,
+    "macro_provider": "synthetic",
+    "macro_is_synthetic": true,
+    "macro_quarters": 8,
+    "rows_after_macro_merge": 560,
+    "final_columns": [
+      "Company",
+      "Ticker",
+      "Sector",
+      "Year",
+      "Quarter",
+      "Period",
+      "quarter_num",
+      "time_index",
+      "source",
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "Net Profit",
+      "Total Assets",
+      "Equity",
+      "Borrowings",
+      "Total Liabilities",
+      "CFO",
+      "CFI",
+      "CFF",
+      "Net Cash Flow",
+      "is_synthetic_company",
+      "CPI_Combined_Index",
+      "CPI_Inflation_Rate",
+      "WPI",
+      "Repo_Rate",
+      "Reverse_Repo_Rate",
+      "oil_price",
+      "exchange_rate",
+      "macro_source",
+      "macro_is_synthetic"
+    ]
+  },
+  "validation": {
+    "all_checks_passed": true,
+    "checks": {
+      "synthetic_accounting_identities": {
+        "passed": true,
+        "identities": {
+          "operating_profit_identity": {
+            "formula": "Operating Profit = Sales - Expenses",
+            "rows_violated": 0,
+            "max_relative_diff": 2.9e-06
+          },
+          "net_cash_flow_identity": {
+            "formula": "Net Cash Flow = CFO + CFI + CFF",
+            "rows_violated": 0,
+            "max_relative_diff": 1.546e-05
+          },
+          "balance_sheet_identity": {
+            "formula": "Total Assets = Equity + Total Liabilities",
+            "rows_violated": 0,
+            "max_relative_diff": 2.1e-07
+          }
+        }
+      },
+      "macro_join_complete": {
+        "passed": true,
+        "macro_null_cells": 0,
+        "null_by_variable": {}
+      },
+      "macro_coherence": {
+        "reverse_repo_below_repo": true,
+        "max_repo_quarterly_move": 0.2,
+        "max_oil_quarterly_pct_move": 0.0489,
+        "max_fx_quarterly_pct_move": 0.0037,
+        "cpi_index_wpi_correlation": 0.9992,
+        "ranges_sane": true,
+        "passed": true
+      },
+      "provenance_flags_present": {
+        "passed": true,
+        "missing_flags": []
+      }
+    }
+  }
+}

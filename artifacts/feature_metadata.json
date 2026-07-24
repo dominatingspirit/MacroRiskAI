@@ -1,0 +1,980 @@
+{
+  "generated_utc": "2026-07-24T06:22:47.669124+00:00",
+  "input_dataset": "updated_phase2_training_dataset.csv",
+  "processed_dataset": "processed_training_dataset.csv",
+  "n_rows": 4680,
+  "n_trainable_rows": 4095,
+  "entity_group": [
+    "source",
+    "Company"
+  ],
+  "order_by": "time_index",
+  "identifier_columns": [
+    "Company",
+    "Ticker",
+    "Period",
+    "Year",
+    "Quarter",
+    "quarter_num",
+    "time_index",
+    "source",
+    "macro_source",
+    "is_synthetic_company",
+    "macro_is_synthetic"
+  ],
+  "categorical_features": [
+    "Sector"
+  ],
+  "numeric_features": [
+    "Sales",
+    "Expenses",
+    "Operating Profit",
+    "Net Profit",
+    "Total Assets",
+    "Equity",
+    "Borrowings",
+    "Total Liabilities",
+    "CFO",
+    "CFI",
+    "CFF",
+    "Net Cash Flow",
+    "CPI_Combined_Index",
+    "CPI_Inflation_Rate",
+    "WPI",
+    "Repo_Rate",
+    "Reverse_Repo_Rate",
+    "oil_price",
+    "exchange_rate",
+    "Quarter_Q1",
+    "Quarter_Q2",
+    "Quarter_Q3",
+    "Quarter_Q4",
+    "Sales_lag1",
+    "Sales_lag2",
+    "Sales_lag4",
+    "Expenses_lag1",
+    "Expenses_lag2",
+    "Expenses_lag4",
+    "Operating Profit_lag1",
+    "Operating Profit_lag2",
+    "Operating Profit_lag4",
+    "Net Profit_lag1",
+    "Net Profit_lag2",
+    "Net Profit_lag4",
+    "Total Assets_lag1",
+    "Total Assets_lag2",
+    "Total Assets_lag4",
+    "Equity_lag1",
+    "Equity_lag2",
+    "Equity_lag4",
+    "Borrowings_lag1",
+    "Borrowings_lag2",
+    "Borrowings_lag4",
+    "Total Liabilities_lag1",
+    "Total Liabilities_lag2",
+    "Total Liabilities_lag4",
+    "CFO_lag1",
+    "CFO_lag2",
+    "CFO_lag4",
+    "CFI_lag1",
+    "CFI_lag2",
+    "CFI_lag4",
+    "CFF_lag1",
+    "CFF_lag2",
+    "CFF_lag4",
+    "Net Cash Flow_lag1",
+    "Net Cash Flow_lag2",
+    "Net Cash Flow_lag4",
+    "CPI_Combined_Index_lag1",
+    "CPI_Combined_Index_lag4",
+    "CPI_Inflation_Rate_lag1",
+    "CPI_Inflation_Rate_lag4",
+    "WPI_lag1",
+    "WPI_lag4",
+    "Repo_Rate_lag1",
+    "Repo_Rate_lag4",
+    "Reverse_Repo_Rate_lag1",
+    "Reverse_Repo_Rate_lag4",
+    "oil_price_lag1",
+    "oil_price_lag4",
+    "exchange_rate_lag1",
+    "exchange_rate_lag4",
+    "Sales_roll4_mean",
+    "Sales_roll4_median",
+    "Sales_roll4_std",
+    "Sales_roll4_growth",
+    "Operating Profit_roll4_mean",
+    "Operating Profit_roll4_median",
+    "Operating Profit_roll4_std",
+    "Operating Profit_roll4_growth",
+    "Net Profit_roll4_mean",
+    "Net Profit_roll4_median",
+    "Net Profit_roll4_std",
+    "Net Profit_roll4_growth",
+    "Borrowings_roll4_mean",
+    "Borrowings_roll4_median",
+    "Borrowings_roll4_std",
+    "Borrowings_roll4_growth",
+    "Total Assets_roll4_mean",
+    "Total Assets_roll4_median",
+    "Total Assets_roll4_std",
+    "Total Assets_roll4_growth",
+    "CFO_roll4_mean",
+    "CFO_roll4_median",
+    "CFO_roll4_std",
+    "CFO_roll4_growth",
+    "Sales_qoq_growth",
+    "Sales_yoy_growth",
+    "Sales_qoq_growth_lag1",
+    "Operating Profit_qoq_growth",
+    "Operating Profit_yoy_growth",
+    "Operating Profit_qoq_growth_lag1",
+    "Net Profit_qoq_growth",
+    "Net Profit_yoy_growth",
+    "Net Profit_qoq_growth_lag1",
+    "Borrowings_qoq_growth",
+    "Borrowings_yoy_growth",
+    "Borrowings_qoq_growth_lag1",
+    "Total Assets_qoq_growth",
+    "Total Assets_yoy_growth",
+    "Total Assets_qoq_growth_lag1",
+    "CFO_qoq_growth",
+    "CFO_yoy_growth",
+    "CFO_qoq_growth_lag1",
+    "repo_x_borrowings",
+    "repo_x_total_assets",
+    "oil_x_sales",
+    "cpi_infl_x_sales",
+    "fx_x_sales"
+  ],
+  "all_feature_columns": [
+    "Sector",
+    "Sales",
+    "Expenses",
+    "Operating Profit",
+    "Net Profit",
+    "Total Assets",
+    "Equity",
+    "Borrowings",
+    "Total Liabilities",
+    "CFO",
+    "CFI",
+    "CFF",
+    "Net Cash Flow",
+    "CPI_Combined_Index",
+    "CPI_Inflation_Rate",
+    "WPI",
+    "Repo_Rate",
+    "Reverse_Repo_Rate",
+    "oil_price",
+    "exchange_rate",
+    "Quarter_Q1",
+    "Quarter_Q2",
+    "Quarter_Q3",
+    "Quarter_Q4",
+    "Sales_lag1",
+    "Sales_lag2",
+    "Sales_lag4",
+    "Expenses_lag1",
+    "Expenses_lag2",
+    "Expenses_lag4",
+    "Operating Profit_lag1",
+    "Operating Profit_lag2",
+    "Operating Profit_lag4",
+    "Net Profit_lag1",
+    "Net Profit_lag2",
+    "Net Profit_lag4",
+    "Total Assets_lag1",
+    "Total Assets_lag2",
+    "Total Assets_lag4",
+    "Equity_lag1",
+    "Equity_lag2",
+    "Equity_lag4",
+    "Borrowings_lag1",
+    "Borrowings_lag2",
+    "Borrowings_lag4",
+    "Total Liabilities_lag1",
+    "Total Liabilities_lag2",
+    "Total Liabilities_lag4",
+    "CFO_lag1",
+    "CFO_lag2",
+    "CFO_lag4",
+    "CFI_lag1",
+    "CFI_lag2",
+    "CFI_lag4",
+    "CFF_lag1",
+    "CFF_lag2",
+    "CFF_lag4",
+    "Net Cash Flow_lag1",
+    "Net Cash Flow_lag2",
+    "Net Cash Flow_lag4",
+    "CPI_Combined_Index_lag1",
+    "CPI_Combined_Index_lag4",
+    "CPI_Inflation_Rate_lag1",
+    "CPI_Inflation_Rate_lag4",
+    "WPI_lag1",
+    "WPI_lag4",
+    "Repo_Rate_lag1",
+    "Repo_Rate_lag4",
+    "Reverse_Repo_Rate_lag1",
+    "Reverse_Repo_Rate_lag4",
+    "oil_price_lag1",
+    "oil_price_lag4",
+    "exchange_rate_lag1",
+    "exchange_rate_lag4",
+    "Sales_roll4_mean",
+    "Sales_roll4_median",
+    "Sales_roll4_std",
+    "Sales_roll4_growth",
+    "Operating Profit_roll4_mean",
+    "Operating Profit_roll4_median",
+    "Operating Profit_roll4_std",
+    "Operating Profit_roll4_growth",
+    "Net Profit_roll4_mean",
+    "Net Profit_roll4_median",
+    "Net Profit_roll4_std",
+    "Net Profit_roll4_growth",
+    "Borrowings_roll4_mean",
+    "Borrowings_roll4_median",
+    "Borrowings_roll4_std",
+    "Borrowings_roll4_growth",
+    "Total Assets_roll4_mean",
+    "Total Assets_roll4_median",
+    "Total Assets_roll4_std",
+    "Total Assets_roll4_growth",
+    "CFO_roll4_mean",
+    "CFO_roll4_median",
+    "CFO_roll4_std",
+    "CFO_roll4_growth",
+    "Sales_qoq_growth",
+    "Sales_yoy_growth",
+    "Sales_qoq_growth_lag1",
+    "Operating Profit_qoq_growth",
+    "Operating Profit_yoy_growth",
+    "Operating Profit_qoq_growth_lag1",
+    "Net Profit_qoq_growth",
+    "Net Profit_yoy_growth",
+    "Net Profit_qoq_growth_lag1",
+    "Borrowings_qoq_growth",
+    "Borrowings_yoy_growth",
+    "Borrowings_qoq_growth_lag1",
+    "Total Assets_qoq_growth",
+    "Total Assets_yoy_growth",
+    "Total Assets_qoq_growth_lag1",
+    "CFO_qoq_growth",
+    "CFO_yoy_growth",
+    "CFO_qoq_growth_lag1",
+    "repo_x_borrowings",
+    "repo_x_total_assets",
+    "oil_x_sales",
+    "cpi_infl_x_sales",
+    "fx_x_sales"
+  ],
+  "target_columns": [
+    "target_Sales",
+    "target_Operating_Profit",
+    "target_Net_Profit",
+    "target_Borrowings",
+    "target_Total_Assets",
+    "target_CFO"
+  ],
+  "target_horizon": 1,
+  "target_base_map": {
+    "target_Sales": "Sales",
+    "target_Operating_Profit": "Operating Profit",
+    "target_Net_Profit": "Net Profit",
+    "target_Borrowings": "Borrowings",
+    "target_Total_Assets": "Total Assets",
+    "target_CFO": "CFO"
+  },
+  "has_target_flag": "has_target",
+  "preprocessing": {
+    "families": [
+      "tree",
+      "linear"
+    ],
+    "scaling_is_global": false,
+    "tree_family": "unscaled, NaN-tolerant",
+    "linear_family": "median-imputed + StandardScaler",
+    "fit_instructions": "Unfitted by design. Fit on the TRAINING split of each CV fold only (leakage-safe); for final inference fit on all training rows, then transform the live feature row."
+  },
+  "feature_provenance": {
+    "Quarter_Q1": {
+      "kind": "seasonal_onehot",
+      "source": "Quarter",
+      "references": "current"
+    },
+    "Quarter_Q2": {
+      "kind": "seasonal_onehot",
+      "source": "Quarter",
+      "references": "current"
+    },
+    "Quarter_Q3": {
+      "kind": "seasonal_onehot",
+      "source": "Quarter",
+      "references": "current"
+    },
+    "Quarter_Q4": {
+      "kind": "seasonal_onehot",
+      "source": "Quarter",
+      "references": "current"
+    },
+    "is_Q4": {
+      "kind": "seasonal_flag",
+      "source": "Quarter",
+      "references": "current"
+    },
+    "Sales_lag1": {
+      "kind": "lag",
+      "base": "Sales",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Sales_lag2": {
+      "kind": "lag",
+      "base": "Sales",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Sales_lag4": {
+      "kind": "lag",
+      "base": "Sales",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Expenses_lag1": {
+      "kind": "lag",
+      "base": "Expenses",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Expenses_lag2": {
+      "kind": "lag",
+      "base": "Expenses",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Expenses_lag4": {
+      "kind": "lag",
+      "base": "Expenses",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Operating Profit_lag1": {
+      "kind": "lag",
+      "base": "Operating Profit",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Operating Profit_lag2": {
+      "kind": "lag",
+      "base": "Operating Profit",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Operating Profit_lag4": {
+      "kind": "lag",
+      "base": "Operating Profit",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Net Profit_lag1": {
+      "kind": "lag",
+      "base": "Net Profit",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Net Profit_lag2": {
+      "kind": "lag",
+      "base": "Net Profit",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Net Profit_lag4": {
+      "kind": "lag",
+      "base": "Net Profit",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Total Assets_lag1": {
+      "kind": "lag",
+      "base": "Total Assets",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Total Assets_lag2": {
+      "kind": "lag",
+      "base": "Total Assets",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Total Assets_lag4": {
+      "kind": "lag",
+      "base": "Total Assets",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Equity_lag1": {
+      "kind": "lag",
+      "base": "Equity",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Equity_lag2": {
+      "kind": "lag",
+      "base": "Equity",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Equity_lag4": {
+      "kind": "lag",
+      "base": "Equity",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Borrowings_lag1": {
+      "kind": "lag",
+      "base": "Borrowings",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Borrowings_lag2": {
+      "kind": "lag",
+      "base": "Borrowings",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Borrowings_lag4": {
+      "kind": "lag",
+      "base": "Borrowings",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Total Liabilities_lag1": {
+      "kind": "lag",
+      "base": "Total Liabilities",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Total Liabilities_lag2": {
+      "kind": "lag",
+      "base": "Total Liabilities",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Total Liabilities_lag4": {
+      "kind": "lag",
+      "base": "Total Liabilities",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "CFO_lag1": {
+      "kind": "lag",
+      "base": "CFO",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "CFO_lag2": {
+      "kind": "lag",
+      "base": "CFO",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "CFO_lag4": {
+      "kind": "lag",
+      "base": "CFO",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "CFI_lag1": {
+      "kind": "lag",
+      "base": "CFI",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "CFI_lag2": {
+      "kind": "lag",
+      "base": "CFI",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "CFI_lag4": {
+      "kind": "lag",
+      "base": "CFI",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "CFF_lag1": {
+      "kind": "lag",
+      "base": "CFF",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "CFF_lag2": {
+      "kind": "lag",
+      "base": "CFF",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "CFF_lag4": {
+      "kind": "lag",
+      "base": "CFF",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Net Cash Flow_lag1": {
+      "kind": "lag",
+      "base": "Net Cash Flow",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Net Cash Flow_lag2": {
+      "kind": "lag",
+      "base": "Net Cash Flow",
+      "lag": 2,
+      "references": "t-2"
+    },
+    "Net Cash Flow_lag4": {
+      "kind": "lag",
+      "base": "Net Cash Flow",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "CPI_Combined_Index_lag1": {
+      "kind": "macro_lag",
+      "base": "CPI_Combined_Index",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "CPI_Combined_Index_lag4": {
+      "kind": "macro_lag",
+      "base": "CPI_Combined_Index",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "CPI_Inflation_Rate_lag1": {
+      "kind": "macro_lag",
+      "base": "CPI_Inflation_Rate",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "CPI_Inflation_Rate_lag4": {
+      "kind": "macro_lag",
+      "base": "CPI_Inflation_Rate",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "WPI_lag1": {
+      "kind": "macro_lag",
+      "base": "WPI",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "WPI_lag4": {
+      "kind": "macro_lag",
+      "base": "WPI",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Repo_Rate_lag1": {
+      "kind": "macro_lag",
+      "base": "Repo_Rate",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Repo_Rate_lag4": {
+      "kind": "macro_lag",
+      "base": "Repo_Rate",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Reverse_Repo_Rate_lag1": {
+      "kind": "macro_lag",
+      "base": "Reverse_Repo_Rate",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "Reverse_Repo_Rate_lag4": {
+      "kind": "macro_lag",
+      "base": "Reverse_Repo_Rate",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "oil_price_lag1": {
+      "kind": "macro_lag",
+      "base": "oil_price",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "oil_price_lag4": {
+      "kind": "macro_lag",
+      "base": "oil_price",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "exchange_rate_lag1": {
+      "kind": "macro_lag",
+      "base": "exchange_rate",
+      "lag": 1,
+      "references": "t-1"
+    },
+    "exchange_rate_lag4": {
+      "kind": "macro_lag",
+      "base": "exchange_rate",
+      "lag": 4,
+      "references": "t-4"
+    },
+    "Sales_roll4_mean": {
+      "kind": "rolling",
+      "base": "Sales",
+      "window": 4,
+      "stat": "mean",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Sales_roll4_median": {
+      "kind": "rolling",
+      "base": "Sales",
+      "window": 4,
+      "stat": "median",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Sales_roll4_std": {
+      "kind": "rolling",
+      "base": "Sales",
+      "window": 4,
+      "stat": "std",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Sales_roll4_growth": {
+      "kind": "rolling",
+      "base": "Sales",
+      "window": 4,
+      "stat": "growth",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Operating Profit_roll4_mean": {
+      "kind": "rolling",
+      "base": "Operating Profit",
+      "window": 4,
+      "stat": "mean",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Operating Profit_roll4_median": {
+      "kind": "rolling",
+      "base": "Operating Profit",
+      "window": 4,
+      "stat": "median",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Operating Profit_roll4_std": {
+      "kind": "rolling",
+      "base": "Operating Profit",
+      "window": 4,
+      "stat": "std",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Operating Profit_roll4_growth": {
+      "kind": "rolling",
+      "base": "Operating Profit",
+      "window": 4,
+      "stat": "growth",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Net Profit_roll4_mean": {
+      "kind": "rolling",
+      "base": "Net Profit",
+      "window": 4,
+      "stat": "mean",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Net Profit_roll4_median": {
+      "kind": "rolling",
+      "base": "Net Profit",
+      "window": 4,
+      "stat": "median",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Net Profit_roll4_std": {
+      "kind": "rolling",
+      "base": "Net Profit",
+      "window": 4,
+      "stat": "std",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Net Profit_roll4_growth": {
+      "kind": "rolling",
+      "base": "Net Profit",
+      "window": 4,
+      "stat": "growth",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Borrowings_roll4_mean": {
+      "kind": "rolling",
+      "base": "Borrowings",
+      "window": 4,
+      "stat": "mean",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Borrowings_roll4_median": {
+      "kind": "rolling",
+      "base": "Borrowings",
+      "window": 4,
+      "stat": "median",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Borrowings_roll4_std": {
+      "kind": "rolling",
+      "base": "Borrowings",
+      "window": 4,
+      "stat": "std",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Borrowings_roll4_growth": {
+      "kind": "rolling",
+      "base": "Borrowings",
+      "window": 4,
+      "stat": "growth",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Total Assets_roll4_mean": {
+      "kind": "rolling",
+      "base": "Total Assets",
+      "window": 4,
+      "stat": "mean",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Total Assets_roll4_median": {
+      "kind": "rolling",
+      "base": "Total Assets",
+      "window": 4,
+      "stat": "median",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Total Assets_roll4_std": {
+      "kind": "rolling",
+      "base": "Total Assets",
+      "window": 4,
+      "stat": "std",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Total Assets_roll4_growth": {
+      "kind": "rolling",
+      "base": "Total Assets",
+      "window": 4,
+      "stat": "growth",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "CFO_roll4_mean": {
+      "kind": "rolling",
+      "base": "CFO",
+      "window": 4,
+      "stat": "mean",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "CFO_roll4_median": {
+      "kind": "rolling",
+      "base": "CFO",
+      "window": 4,
+      "stat": "median",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "CFO_roll4_std": {
+      "kind": "rolling",
+      "base": "CFO",
+      "window": 4,
+      "stat": "std",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "CFO_roll4_growth": {
+      "kind": "rolling",
+      "base": "CFO",
+      "window": 4,
+      "stat": "growth",
+      "shift": 1,
+      "references": "t-1..t-4"
+    },
+    "Sales_qoq_growth": {
+      "kind": "growth_qoq",
+      "base": "Sales",
+      "references": "t vs t-1"
+    },
+    "Sales_yoy_growth": {
+      "kind": "growth_yoy",
+      "base": "Sales",
+      "references": "t vs t-4"
+    },
+    "Sales_qoq_growth_lag1": {
+      "kind": "growth_qoq_lagged",
+      "base": "Sales",
+      "references": "t-1 vs t-2"
+    },
+    "Operating Profit_qoq_growth": {
+      "kind": "growth_qoq",
+      "base": "Operating Profit",
+      "references": "t vs t-1"
+    },
+    "Operating Profit_yoy_growth": {
+      "kind": "growth_yoy",
+      "base": "Operating Profit",
+      "references": "t vs t-4"
+    },
+    "Operating Profit_qoq_growth_lag1": {
+      "kind": "growth_qoq_lagged",
+      "base": "Operating Profit",
+      "references": "t-1 vs t-2"
+    },
+    "Net Profit_qoq_growth": {
+      "kind": "growth_qoq",
+      "base": "Net Profit",
+      "references": "t vs t-1"
+    },
+    "Net Profit_yoy_growth": {
+      "kind": "growth_yoy",
+      "base": "Net Profit",
+      "references": "t vs t-4"
+    },
+    "Net Profit_qoq_growth_lag1": {
+      "kind": "growth_qoq_lagged",
+      "base": "Net Profit",
+      "references": "t-1 vs t-2"
+    },
+    "Borrowings_qoq_growth": {
+      "kind": "growth_qoq",
+      "base": "Borrowings",
+      "references": "t vs t-1"
+    },
+    "Borrowings_yoy_growth": {
+      "kind": "growth_yoy",
+      "base": "Borrowings",
+      "references": "t vs t-4"
+    },
+    "Borrowings_qoq_growth_lag1": {
+      "kind": "growth_qoq_lagged",
+      "base": "Borrowings",
+      "references": "t-1 vs t-2"
+    },
+    "Total Assets_qoq_growth": {
+      "kind": "growth_qoq",
+      "base": "Total Assets",
+      "references": "t vs t-1"
+    },
+    "Total Assets_yoy_growth": {
+      "kind": "growth_yoy",
+      "base": "Total Assets",
+      "references": "t vs t-4"
+    },
+    "Total Assets_qoq_growth_lag1": {
+      "kind": "growth_qoq_lagged",
+      "base": "Total Assets",
+      "references": "t-1 vs t-2"
+    },
+    "CFO_qoq_growth": {
+      "kind": "growth_qoq",
+      "base": "CFO",
+      "references": "t vs t-1"
+    },
+    "CFO_yoy_growth": {
+      "kind": "growth_yoy",
+      "base": "CFO",
+      "references": "t vs t-4"
+    },
+    "CFO_qoq_growth_lag1": {
+      "kind": "growth_qoq_lagged",
+      "base": "CFO",
+      "references": "t-1 vs t-2"
+    },
+    "repo_x_borrowings": {
+      "kind": "interaction",
+      "a": "Repo_Rate",
+      "b": "Borrowings",
+      "references": "current x current"
+    },
+    "repo_x_total_assets": {
+      "kind": "interaction",
+      "a": "Repo_Rate",
+      "b": "Total Assets",
+      "references": "current x current"
+    },
+    "oil_x_sales": {
+      "kind": "interaction",
+      "a": "oil_price",
+      "b": "Sales",
+      "references": "current x current"
+    },
+    "cpi_infl_x_sales": {
+      "kind": "interaction",
+      "a": "CPI_Inflation_Rate",
+      "b": "Sales",
+      "references": "current x current"
+    },
+    "fx_x_sales": {
+      "kind": "interaction",
+      "a": "exchange_rate",
+      "b": "Sales",
+      "references": "current x current"
+    },
+    "target_Sales": {
+      "kind": "target",
+      "base": "Sales",
+      "horizon": 1,
+      "references": "t+1"
+    },
+    "target_Operating_Profit": {
+      "kind": "target",
+      "base": "Operating Profit",
+      "horizon": 1,
+      "references": "t+1"
+    },
+    "target_Net_Profit": {
+      "kind": "target",
+      "base": "Net Profit",
+      "horizon": 1,
+      "references": "t+1"
+    },
+    "target_Borrowings": {
+      "kind": "target",
+      "base": "Borrowings",
+      "horizon": 1,
+      "references": "t+1"
+    },
+    "target_Total_Assets": {
+      "kind": "target",
+      "base": "Total Assets",
+      "horizon": 1,
+      "references": "t+1"
+    },
+    "target_CFO": {
+      "kind": "target",
+      "base": "CFO",
+      "horizon": 1,
+      "references": "t+1"
+    }
+  },
+  "dropped_features": [
+    "is_Q4"
+  ],
+  "leakage_validation_passed": true
+}

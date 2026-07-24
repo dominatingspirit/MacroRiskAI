@@ -1,0 +1,288 @@
+{
+  "autocorrelation": {
+    "Sales": {
+      "real": {
+        "acf_lag1": 0.9994,
+        "acf_lag2": 0.9988,
+        "acf_lag4": 0.9979,
+        "lag1_variance_explained": 0.9988
+      },
+      "synth": {
+        "acf_lag1": 0.9993,
+        "acf_lag2": 0.9982,
+        "acf_lag4": 0.9966,
+        "lag1_variance_explained": 0.9986
+      }
+    },
+    "Operating Profit": {
+      "real": {
+        "acf_lag1": 0.9873,
+        "acf_lag2": 0.9864,
+        "acf_lag4": 0.9846,
+        "lag1_variance_explained": 0.9748
+      },
+      "synth": {
+        "acf_lag1": 0.9875,
+        "acf_lag2": 0.9768,
+        "acf_lag4": 0.9611,
+        "lag1_variance_explained": 0.9752
+      }
+    },
+    "Net Profit": {
+      "real": {
+        "acf_lag1": 0.988,
+        "acf_lag2": 0.9877,
+        "acf_lag4": 0.9907,
+        "lag1_variance_explained": 0.9761
+      },
+      "synth": {
+        "acf_lag1": 0.9757,
+        "acf_lag2": 0.9563,
+        "acf_lag4": 0.928,
+        "lag1_variance_explained": 0.952
+      }
+    },
+    "Borrowings": {
+      "real": {
+        "acf_lag1": 0.9993,
+        "acf_lag2": 0.9989,
+        "acf_lag4": 0.9986,
+        "lag1_variance_explained": 0.9986
+      },
+      "synth": {
+        "acf_lag1": 0.9907,
+        "acf_lag2": 0.9831,
+        "acf_lag4": 0.9742,
+        "lag1_variance_explained": 0.9815
+      }
+    },
+    "Total Assets": {
+      "real": {
+        "acf_lag1": 0.9994,
+        "acf_lag2": 0.9994,
+        "acf_lag4": 0.999,
+        "lag1_variance_explained": 0.9988
+      },
+      "synth": {
+        "acf_lag1": 0.9952,
+        "acf_lag2": 0.9908,
+        "acf_lag4": 0.987,
+        "lag1_variance_explained": 0.9904
+      }
+    },
+    "CFO": {
+      "real": {
+        "acf_lag1": 0.9974,
+        "acf_lag2": 0.9975,
+        "acf_lag4": 0.9965,
+        "lag1_variance_explained": 0.9948
+      },
+      "synth": {
+        "acf_lag1": 0.9853,
+        "acf_lag2": 0.9736,
+        "acf_lag4": 0.9573,
+        "lag1_variance_explained": 0.9708
+      }
+    }
+  },
+  "delta_distributions": {
+    "Sales": {
+      "level_var_ratio_synth_over_real": 1.1474,
+      "delta_std_real": 2780.3817,
+      "delta_std_synth": 3088.5462,
+      "delta_std_ratio_synth_over_real": 1.1108,
+      "pct_growth_std_real": 0.0228,
+      "pct_growth_std_synth": 0.0238,
+      "pct_growth_std_ratio_synth_over_real": 1.0406,
+      "pct_growth_ks_synth_vs_real": 0.1635
+    },
+    "Operating Profit": {
+      "level_var_ratio_synth_over_real": 1.2447,
+      "delta_std_real": 1495.2091,
+      "delta_std_synth": 1664.3311,
+      "delta_std_ratio_synth_over_real": 1.1131,
+      "pct_growth_std_real": 0.0771,
+      "pct_growth_std_synth": 0.0822,
+      "pct_growth_std_ratio_synth_over_real": 1.0667,
+      "pct_growth_ks_synth_vs_real": 0.0564
+    },
+    "Net Profit": {
+      "level_var_ratio_synth_over_real": 1.357,
+      "delta_std_real": 1083.9265,
+      "delta_std_synth": 1807.6347,
+      "delta_std_ratio_synth_over_real": 1.6677,
+      "pct_growth_std_real": 0.0688,
+      "pct_growth_std_synth": 0.1137,
+      "pct_growth_std_ratio_synth_over_real": 1.653,
+      "pct_growth_ks_synth_vs_real": 0.1428
+    },
+    "Borrowings": {
+      "level_var_ratio_synth_over_real": 0.4568,
+      "delta_std_real": 21420.5036,
+      "delta_std_synth": 52662.8573,
+      "delta_std_ratio_synth_over_real": 2.4585,
+      "pct_growth_std_real": 0.1663,
+      "pct_growth_std_synth": 0.1356,
+      "pct_growth_std_ratio_synth_over_real": 0.8159,
+      "pct_growth_ks_synth_vs_real": 0.1241
+    },
+    "Total Assets": {
+      "level_var_ratio_synth_over_real": 1.0911,
+      "delta_std_real": 30432.6491,
+      "delta_std_synth": 91876.6625,
+      "delta_std_ratio_synth_over_real": 3.019,
+      "pct_growth_std_real": 0.0591,
+      "pct_growth_std_synth": 0.0829,
+      "pct_growth_std_ratio_synth_over_real": 1.4023,
+      "pct_growth_ks_synth_vs_real": 0.2027
+    },
+    "CFO": {
+      "level_var_ratio_synth_over_real": 1.2907,
+      "delta_std_real": 1329.8553,
+      "delta_std_synth": 3579.6246,
+      "delta_std_ratio_synth_over_real": 2.6917,
+      "pct_growth_std_real": 0.0477,
+      "pct_growth_std_synth": 0.1128,
+      "pct_growth_std_ratio_synth_over_real": 2.3654,
+      "pct_growth_ks_synth_vs_real": 0.2162
+    }
+  },
+  "diversity": {
+    "n_real_entities": 20,
+    "n_synth_entities": 565,
+    "synth_nn_distance_mean": 0.2429,
+    "synth_nn_distance_median": 0.1366,
+    "synth_nn_distance_min": 0.0135,
+    "synth_near_duplicate_fraction_lt_0_1": 0.4071,
+    "between_company_dispersion_ratio_by_sector": {
+      "Auto": 0.979,
+      "Banking": 0.956,
+      "Energy": 1.044,
+      "FMCG": 1.172,
+      "Tech": 1.036
+    },
+    "dispersion_ratio_note": "ratio = synthetic / real between-company dispersion; ~1 means synthetic companies are as diverse as real ones, <1 means over-concentrated."
+  },
+  "formulation_comparison": {
+    "target_Sales": {
+      "levels": {
+        "model_r2": 0.9984,
+        "naive_r2": 0.9984,
+        "target_std": 80101.382,
+        "skill_over_naive": -0.0
+      },
+      "delta": {
+        "model_r2": 0.0783,
+        "naive_r2": -0.0681,
+        "target_std": 3130.1936,
+        "skill_over_naive": 0.1464
+      },
+      "pct_growth": {
+        "model_r2": 0.0075,
+        "naive_r2": -0.124,
+        "target_std": 0.0236,
+        "skill_over_naive": 0.1315
+      }
+    },
+    "target_Operating_Profit": {
+      "levels": {
+        "model_r2": 0.9746,
+        "naive_r2": 0.977,
+        "target_std": 10962.4844,
+        "skill_over_naive": -0.0024
+      },
+      "delta": {
+        "model_r2": -0.0475,
+        "naive_r2": -0.0033,
+        "target_std": 1661.1107,
+        "skill_over_naive": -0.0442
+      },
+      "pct_growth": {
+        "model_r2": 0.0349,
+        "naive_r2": -0.0152,
+        "target_std": 0.0815,
+        "skill_over_naive": 0.0501
+      }
+    },
+    "target_Net_Profit": {
+      "levels": {
+        "model_r2": 0.9544,
+        "naive_r2": 0.9559,
+        "target_std": 8577.7865,
+        "skill_over_naive": -0.0016
+      },
+      "delta": {
+        "model_r2": 0.0208,
+        "naive_r2": -0.0051,
+        "target_std": 1796.2216,
+        "skill_over_naive": 0.026
+      },
+      "pct_growth": {
+        "model_r2": 0.0251,
+        "naive_r2": -0.0226,
+        "target_std": 0.113,
+        "skill_over_naive": 0.0478
+      }
+    },
+    "target_Borrowings": {
+      "levels": {
+        "model_r2": 0.9726,
+        "naive_r2": 0.9779,
+        "target_std": 401621.6236,
+        "skill_over_naive": -0.0053
+      },
+      "delta": {
+        "model_r2": -0.0051,
+        "naive_r2": -0.0,
+        "target_std": 59708.9877,
+        "skill_over_naive": -0.0051
+      },
+      "pct_growth": {
+        "model_r2": 0.0294,
+        "naive_r2": -0.0227,
+        "target_std": 0.1505,
+        "skill_over_naive": 0.0521
+      }
+    },
+    "target_Total_Assets": {
+      "levels": {
+        "model_r2": 0.988,
+        "naive_r2": 0.9888,
+        "target_std": 938038.5492,
+        "skill_over_naive": -0.0008
+      },
+      "delta": {
+        "model_r2": -0.1021,
+        "naive_r2": -0.0,
+        "target_std": 99113.833,
+        "skill_over_naive": -0.102
+      },
+      "pct_growth": {
+        "model_r2": 0.0181,
+        "naive_r2": -0.0202,
+        "target_std": 0.0877,
+        "skill_over_naive": 0.0383
+      }
+    },
+    "target_CFO": {
+      "levels": {
+        "model_r2": 0.9768,
+        "naive_r2": 0.9773,
+        "target_std": 21929.8075,
+        "skill_over_naive": -0.0005
+      },
+      "delta": {
+        "model_r2": -0.0051,
+        "naive_r2": -0.0024,
+        "target_std": 3299.8298,
+        "skill_over_naive": -0.0026
+      },
+      "pct_growth": {
+        "model_r2": 0.0362,
+        "naive_r2": -0.0153,
+        "target_std": 0.1094,
+        "skill_over_naive": 0.0515
+      }
+    }
+  }
+}

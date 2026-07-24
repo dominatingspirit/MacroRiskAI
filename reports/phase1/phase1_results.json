@@ -1,0 +1,2177 @@
+{
+  "audits": {
+    "mock": {
+      "dataset": "mock",
+      "source_file": "mock_quarterly_financials.csv",
+      "file_format": "csv",
+      "raw_columns": [
+        "Company",
+        "Ticker",
+        "Sector",
+        "Year",
+        "Quarter",
+        "Period",
+        "Sales",
+        "Expenses",
+        "Operating Profit",
+        "Net Profit",
+        "Total Assets",
+        "Equity",
+        "Borrowings",
+        "Total Liabilities",
+        "CFO",
+        "CFI",
+        "CFF",
+        "Net Cash Flow"
+      ],
+      "renamed_columns": {},
+      "shape": {
+        "rows": 80,
+        "columns": 20
+      },
+      "overview": {
+        "total_observations": 80,
+        "n_companies": 10,
+        "companies": [
+          "HDFC Bank",
+          "Hindustan Unilever",
+          "ICICI Bank",
+          "ITC",
+          "Infosys",
+          "Maruti Suzuki",
+          "ONGC",
+          "Reliance Industries",
+          "TCS",
+          "Tata Motors"
+        ],
+        "n_sectors": 5,
+        "sectors": [
+          "Auto",
+          "Banking",
+          "Energy",
+          "FMCG",
+          "Tech"
+        ],
+        "n_distinct_quarters": 8,
+        "quarter_coverage": [
+          "Q1 2024",
+          "Q2 2024",
+          "Q3 2024",
+          "Q4 2024",
+          "Q1 2025",
+          "Q2 2025",
+          "Q3 2025",
+          "Q4 2025"
+        ],
+        "time_span": {
+          "start": "Q1 2024",
+          "end": "Q4 2025",
+          "year_min": 2024,
+          "year_max": 2025
+        },
+        "companies_per_sector": {
+          "Auto": 2,
+          "Banking": 2,
+          "Energy": 2,
+          "FMCG": 2,
+          "Tech": 2
+        }
+      },
+      "features": {
+        "identifier_columns": [
+          "Company",
+          "Ticker",
+          "Sector",
+          "Year",
+          "Quarter",
+          "Period"
+        ],
+        "numeric_columns": [
+          "Sales",
+          "Expenses",
+          "Operating Profit",
+          "Net Profit",
+          "Total Assets",
+          "Equity",
+          "Borrowings",
+          "Total Liabilities",
+          "CFO",
+          "CFI",
+          "CFF",
+          "Net Cash Flow"
+        ],
+        "engineered_columns": [
+          "quarter_num",
+          "time_index"
+        ],
+        "dtypes": {
+          "Company": "object",
+          "Ticker": "object",
+          "Sector": "object",
+          "Year": "int64",
+          "Quarter": "object",
+          "Period": "object",
+          "Sales": "float64",
+          "Expenses": "float64",
+          "Operating Profit": "float64",
+          "Net Profit": "float64",
+          "Total Assets": "float64",
+          "Equity": "float64",
+          "Borrowings": "float64",
+          "Total Liabilities": "float64",
+          "CFO": "float64",
+          "CFI": "float64",
+          "CFF": "float64",
+          "Net Cash Flow": "float64",
+          "quarter_num": "int64",
+          "time_index": "int64"
+        }
+      },
+      "missing_values": {
+        "total_missing_cells": 0,
+        "columns_with_missing": {},
+        "rows_with_any_missing": 0
+      },
+      "duplicates": {
+        "full_row_duplicates": 0,
+        "panel_key": [
+          "Company",
+          "Year",
+          "Quarter"
+        ],
+        "duplicate_company_quarter_records": 0,
+        "duplicate_company_quarter_keys": []
+      },
+      "descriptive_statistics": {
+        "Sales": {
+          "count": 80.0,
+          "mean": 84611.02425,
+          "std": 68589.774968,
+          "min": 15454.63,
+          "25%": 39712.195,
+          "50%": 62861.47,
+          "75%": 108347.9075,
+          "max": 253856.6,
+          "skew": 1.199414,
+          "kurtosis": 0.403847
+        },
+        "Expenses": {
+          "count": 80.0,
+          "mean": 69865.1485,
+          "std": 60529.575263,
+          "min": 11634.46,
+          "25%": 31768.08,
+          "50%": 46445.14,
+          "75%": 97143.875,
+          "max": 215012.61,
+          "skew": 1.185569,
+          "kurtosis": 0.173711
+        },
+        "Operating Profit": {
+          "count": 80.0,
+          "mean": 14745.87575,
+          "std": 9747.425305,
+          "min": 2818.45,
+          "25%": 7089.1725,
+          "50%": 13915.06,
+          "75%": 19223.88,
+          "max": 40362.45,
+          "skew": 0.95494,
+          "kurtosis": 0.473536
+        },
+        "Net Profit": {
+          "count": 80.0,
+          "mean": 11059.406625,
+          "std": 7310.568748,
+          "min": 2113.84,
+          "25%": 5316.88,
+          "50%": 10436.3,
+          "75%": 14417.9075,
+          "max": 30271.84,
+          "skew": 0.95494,
+          "kurtosis": 0.473536
+        },
+        "Total Assets": {
+          "count": 80.0,
+          "mean": 340423.482125,
+          "std": 279470.784685,
+          "min": 62766.64,
+          "25%": 151655.7975,
+          "50%": 259006.78,
+          "75%": 415183.61,
+          "max": 1124487.9,
+          "skew": 1.213744,
+          "kurtosis": 0.488694
+        },
+        "Equity": {
+          "count": 80.0,
+          "mean": 170211.741,
+          "std": 139735.391928,
+          "min": 31383.32,
+          "25%": 75827.9,
+          "50%": 129503.39,
+          "75%": 207591.8,
+          "max": 562243.95,
+          "skew": 1.213744,
+          "kurtosis": 0.488694
+        },
+        "Borrowings": {
+          "count": 80.0,
+          "mean": 102127.045375,
+          "std": 83841.235778,
+          "min": 18829.99,
+          "25%": 45496.735,
+          "50%": 77702.035,
+          "75%": 124555.08,
+          "max": 337346.37,
+          "skew": 1.213744,
+          "kurtosis": 0.488694
+        },
+        "Total Liabilities": {
+          "count": 80.0,
+          "mean": 170211.741,
+          "std": 139735.391928,
+          "min": 31383.32,
+          "25%": 75827.9,
+          "50%": 129503.39,
+          "75%": 207591.8,
+          "max": 562243.95,
+          "skew": 1.213744,
+          "kurtosis": 0.488694
+        },
+        "CFO": {
+          "count": 80.0,
+          "mean": 17867.877,
+          "std": 12409.074841,
+          "min": 3370.25,
+          "25%": 7012.1375,
+          "50%": 16348.3,
+          "75%": 23520.2875,
+          "max": 51026.55,
+          "skew": 1.119174,
+          "kurtosis": 0.81734
+        },
+        "CFI": {
+          "count": 80.0,
+          "mean": -10720.726125,
+          "std": 7445.445087,
+          "min": -30615.93,
+          "25%": -14112.1725,
+          "50%": -9808.98,
+          "75%": -4207.285,
+          "max": -2022.15,
+          "skew": -1.119174,
+          "kurtosis": 0.81734
+        },
+        "CFF": {
+          "count": 80.0,
+          "mean": -3573.575375,
+          "std": 2481.81512,
+          "min": -10205.31,
+          "25%": -4704.0575,
+          "50%": -3269.66,
+          "75%": -1402.43,
+          "max": -674.05,
+          "skew": -1.119174,
+          "kurtosis": 0.817339
+        },
+        "Net Cash Flow": {
+          "count": 80.0,
+          "mean": 3573.575375,
+          "std": 2481.81512,
+          "min": 674.05,
+          "25%": 1402.43,
+          "50%": 3269.66,
+          "75%": 4704.0575,
+          "max": 10205.31,
+          "skew": 1.119174,
+          "kurtosis": 0.817339
+        }
+      },
+      "outliers": {
+        "Sales": {
+          "count": 8,
+          "lower_fence": -63241.37375,
+          "upper_fence": 211301.47625,
+          "min": 15454.63,
+          "max": 253856.6
+        },
+        "Expenses": {
+          "count": 7,
+          "lower_fence": -66295.6125,
+          "upper_fence": 195207.5675,
+          "min": 11634.46,
+          "max": 215012.61
+        },
+        "Operating Profit": {
+          "count": 4,
+          "lower_fence": -11112.88875,
+          "upper_fence": 37425.94125,
+          "min": 2818.45,
+          "max": 40362.45
+        },
+        "Net Profit": {
+          "count": 4,
+          "lower_fence": -8334.66125,
+          "upper_fence": 28069.44875,
+          "min": 2113.84,
+          "max": 30271.84
+        },
+        "Total Assets": {
+          "count": 8,
+          "lower_fence": -243635.92125,
+          "upper_fence": 810475.32875,
+          "min": 62766.64,
+          "max": 1124487.9
+        },
+        "Equity": {
+          "count": 8,
+          "lower_fence": -121817.95,
+          "upper_fence": 405237.65,
+          "min": 31383.32,
+          "max": 562243.95
+        },
+        "Borrowings": {
+          "count": 8,
+          "lower_fence": -73090.7825,
+          "upper_fence": 243142.5975,
+          "min": 18829.99,
+          "max": 337346.37
+        },
+        "Total Liabilities": {
+          "count": 8,
+          "lower_fence": -121817.95,
+          "upper_fence": 405237.65,
+          "min": 31383.32,
+          "max": 562243.95
+        },
+        "CFO": {
+          "count": 4,
+          "lower_fence": -17750.0875,
+          "upper_fence": 48282.5125,
+          "min": 3370.25,
+          "max": 51026.55
+        },
+        "CFI": {
+          "count": 4,
+          "lower_fence": -28969.50375,
+          "upper_fence": 10650.04625,
+          "min": -30615.93,
+          "max": -2022.15
+        },
+        "CFF": {
+          "count": 4,
+          "lower_fence": -9656.49875,
+          "upper_fence": 3550.01125,
+          "min": -10205.31,
+          "max": -674.05
+        },
+        "Net Cash Flow": {
+          "count": 4,
+          "lower_fence": -3550.01125,
+          "upper_fence": 9656.49875,
+          "min": 674.05,
+          "max": 10205.31
+        },
+        "_total_outlier_cells": 71
+      },
+      "distributions": {
+        "Sales": {
+          "mean": 84611.02425,
+          "median": 62861.47,
+          "std": 68589.774968,
+          "min": 15454.63,
+          "p25": 39712.195,
+          "p50": 62861.47,
+          "p75": 108347.9075,
+          "max": 253856.6,
+          "skew": 1.1994138165349477,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Expenses": {
+          "mean": 69865.1485,
+          "median": 46445.14,
+          "std": 60529.575263,
+          "min": 11634.46,
+          "p25": 31768.08,
+          "p50": 46445.14,
+          "p75": 97143.875,
+          "max": 215012.61,
+          "skew": 1.185569408960902,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Operating Profit": {
+          "mean": 14745.87575,
+          "median": 13915.06,
+          "std": 9747.425305,
+          "min": 2818.45,
+          "p25": 7089.1725,
+          "p50": 13915.06,
+          "p75": 19223.88,
+          "max": 40362.45,
+          "skew": 0.9549403015865434,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Net Profit": {
+          "mean": 11059.406625,
+          "median": 10436.3,
+          "std": 7310.568748,
+          "min": 2113.84,
+          "p25": 5316.88,
+          "p50": 10436.3,
+          "p75": 14417.9075,
+          "max": 30271.84,
+          "skew": 0.9549400861462545,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Total Assets": {
+          "mean": 340423.482125,
+          "median": 259006.78,
+          "std": 279470.784685,
+          "min": 62766.64,
+          "p25": 151655.7975,
+          "p50": 259006.78,
+          "p75": 415183.61,
+          "max": 1124487.9,
+          "skew": 1.213743658557827,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Equity": {
+          "mean": 170211.741,
+          "median": 129503.39,
+          "std": 139735.391928,
+          "min": 31383.32,
+          "p25": 75827.9,
+          "p50": 129503.39,
+          "p75": 207591.8,
+          "max": 562243.95,
+          "skew": 1.213743668704002,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Borrowings": {
+          "mean": 102127.045375,
+          "median": 77702.035,
+          "std": 83841.235778,
+          "min": 18829.99,
+          "p25": 45496.735,
+          "p50": 77702.035,
+          "p75": 124555.08,
+          "max": 337346.37,
+          "skew": 1.213743658745968,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Total Liabilities": {
+          "mean": 170211.741,
+          "median": 129503.39,
+          "std": 139735.391928,
+          "min": 31383.32,
+          "p25": 75827.9,
+          "p50": 129503.39,
+          "p75": 207591.8,
+          "max": 562243.95,
+          "skew": 1.213743668704002,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "CFO": {
+          "mean": 17867.877,
+          "median": 16348.3,
+          "std": 12409.074841,
+          "min": 3370.25,
+          "p25": 7012.1375,
+          "p50": 16348.3,
+          "p75": 23520.2875,
+          "max": 51026.55,
+          "skew": 1.1191736361935738,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "CFI": {
+          "mean": -10720.726125,
+          "median": -9808.98,
+          "std": 7445.445087,
+          "min": -30615.93,
+          "p25": -14112.1725,
+          "p50": -9808.98,
+          "p75": -4207.285,
+          "max": -2022.15,
+          "skew": -1.1191736643780228,
+          "shape": "left-skewed",
+          "has_negative": true
+        },
+        "CFF": {
+          "mean": -3573.575375,
+          "median": -3269.66,
+          "std": 2481.81512,
+          "min": -10205.31,
+          "p25": -4704.0575,
+          "p50": -3269.66,
+          "p75": -1402.43,
+          "max": -674.05,
+          "skew": -1.1191736719038767,
+          "shape": "left-skewed",
+          "has_negative": true
+        },
+        "Net Cash Flow": {
+          "mean": 3573.575375,
+          "median": 3269.66,
+          "std": 2481.81512,
+          "min": 674.05,
+          "p25": 1402.43,
+          "p50": 3269.66,
+          "p75": 4704.0575,
+          "max": 10205.31,
+          "skew": 1.1191736719038767,
+          "shape": "right-skewed",
+          "has_negative": false
+        }
+      },
+      "correlation_matrix": {
+        "matrix": {
+          "Sales": {
+            "Sales": 1.0,
+            "Expenses": 0.996382,
+            "Operating Profit": 0.849375,
+            "Net Profit": 0.849375,
+            "Total Assets": 0.996156,
+            "Equity": 0.996156,
+            "Borrowings": 0.996156,
+            "Total Liabilities": 0.996156,
+            "CFO": 0.949091,
+            "CFI": -0.949091,
+            "CFF": -0.949091,
+            "Net Cash Flow": 0.949091
+          },
+          "Expenses": {
+            "Sales": 0.996382,
+            "Expenses": 1.0,
+            "Operating Profit": 0.801444,
+            "Net Profit": 0.801443,
+            "Total Assets": 0.992252,
+            "Equity": 0.992252,
+            "Borrowings": 0.992252,
+            "Total Liabilities": 0.992252,
+            "CFO": 0.919095,
+            "CFI": -0.919095,
+            "CFF": -0.919095,
+            "Net Cash Flow": 0.919095
+          },
+          "Operating Profit": {
+            "Sales": 0.849375,
+            "Expenses": 0.801444,
+            "Operating Profit": 1.0,
+            "Net Profit": 1.0,
+            "Total Assets": 0.84797,
+            "Equity": 0.84797,
+            "Borrowings": 0.84797,
+            "Total Liabilities": 0.84797,
+            "CFO": 0.971082,
+            "CFI": -0.971082,
+            "CFF": -0.971082,
+            "Net Cash Flow": 0.971082
+          },
+          "Net Profit": {
+            "Sales": 0.849375,
+            "Expenses": 0.801443,
+            "Operating Profit": 1.0,
+            "Net Profit": 1.0,
+            "Total Assets": 0.84797,
+            "Equity": 0.84797,
+            "Borrowings": 0.84797,
+            "Total Liabilities": 0.84797,
+            "CFO": 0.971082,
+            "CFI": -0.971082,
+            "CFF": -0.971082,
+            "Net Cash Flow": 0.971082
+          },
+          "Total Assets": {
+            "Sales": 0.996156,
+            "Expenses": 0.992252,
+            "Operating Profit": 0.84797,
+            "Net Profit": 0.84797,
+            "Total Assets": 1.0,
+            "Equity": 1.0,
+            "Borrowings": 1.0,
+            "Total Liabilities": 1.0,
+            "CFO": 0.949995,
+            "CFI": -0.949995,
+            "CFF": -0.949995,
+            "Net Cash Flow": 0.949995
+          },
+          "Equity": {
+            "Sales": 0.996156,
+            "Expenses": 0.992252,
+            "Operating Profit": 0.84797,
+            "Net Profit": 0.84797,
+            "Total Assets": 1.0,
+            "Equity": 1.0,
+            "Borrowings": 1.0,
+            "Total Liabilities": 1.0,
+            "CFO": 0.949995,
+            "CFI": -0.949995,
+            "CFF": -0.949995,
+            "Net Cash Flow": 0.949995
+          },
+          "Borrowings": {
+            "Sales": 0.996156,
+            "Expenses": 0.992252,
+            "Operating Profit": 0.84797,
+            "Net Profit": 0.84797,
+            "Total Assets": 1.0,
+            "Equity": 1.0,
+            "Borrowings": 1.0,
+            "Total Liabilities": 1.0,
+            "CFO": 0.949995,
+            "CFI": -0.949995,
+            "CFF": -0.949995,
+            "Net Cash Flow": 0.949995
+          },
+          "Total Liabilities": {
+            "Sales": 0.996156,
+            "Expenses": 0.992252,
+            "Operating Profit": 0.84797,
+            "Net Profit": 0.84797,
+            "Total Assets": 1.0,
+            "Equity": 1.0,
+            "Borrowings": 1.0,
+            "Total Liabilities": 1.0,
+            "CFO": 0.949995,
+            "CFI": -0.949995,
+            "CFF": -0.949995,
+            "Net Cash Flow": 0.949995
+          },
+          "CFO": {
+            "Sales": 0.949091,
+            "Expenses": 0.919095,
+            "Operating Profit": 0.971082,
+            "Net Profit": 0.971082,
+            "Total Assets": 0.949995,
+            "Equity": 0.949995,
+            "Borrowings": 0.949995,
+            "Total Liabilities": 0.949995,
+            "CFO": 1.0,
+            "CFI": -1.0,
+            "CFF": -1.0,
+            "Net Cash Flow": 1.0
+          },
+          "CFI": {
+            "Sales": -0.949091,
+            "Expenses": -0.919095,
+            "Operating Profit": -0.971082,
+            "Net Profit": -0.971082,
+            "Total Assets": -0.949995,
+            "Equity": -0.949995,
+            "Borrowings": -0.949995,
+            "Total Liabilities": -0.949995,
+            "CFO": -1.0,
+            "CFI": 1.0,
+            "CFF": 1.0,
+            "Net Cash Flow": -1.0
+          },
+          "CFF": {
+            "Sales": -0.949091,
+            "Expenses": -0.919095,
+            "Operating Profit": -0.971082,
+            "Net Profit": -0.971082,
+            "Total Assets": -0.949995,
+            "Equity": -0.949995,
+            "Borrowings": -0.949995,
+            "Total Liabilities": -0.949995,
+            "CFO": -1.0,
+            "CFI": 1.0,
+            "CFF": 1.0,
+            "Net Cash Flow": -1.0
+          },
+          "Net Cash Flow": {
+            "Sales": 0.949091,
+            "Expenses": 0.919095,
+            "Operating Profit": 0.971082,
+            "Net Profit": 0.971082,
+            "Total Assets": 0.949995,
+            "Equity": 0.949995,
+            "Borrowings": 0.949995,
+            "Total Liabilities": 0.949995,
+            "CFO": 1.0,
+            "CFI": -1.0,
+            "CFF": -1.0,
+            "Net Cash Flow": 1.0
+          }
+        },
+        "high_correlation_pairs": [
+          {
+            "a": "Operating Profit",
+            "b": "Net Profit",
+            "r": 1.0
+          },
+          {
+            "a": "Total Assets",
+            "b": "Equity",
+            "r": 1.0
+          },
+          {
+            "a": "Total Assets",
+            "b": "Borrowings",
+            "r": 1.0
+          },
+          {
+            "a": "Total Assets",
+            "b": "Total Liabilities",
+            "r": 1.0
+          },
+          {
+            "a": "Equity",
+            "b": "Borrowings",
+            "r": 1.0
+          },
+          {
+            "a": "Equity",
+            "b": "Total Liabilities",
+            "r": 1.0
+          },
+          {
+            "a": "Borrowings",
+            "b": "Total Liabilities",
+            "r": 1.0
+          },
+          {
+            "a": "CFO",
+            "b": "CFI",
+            "r": -1.0
+          },
+          {
+            "a": "CFO",
+            "b": "CFF",
+            "r": -1.0
+          },
+          {
+            "a": "CFO",
+            "b": "Net Cash Flow",
+            "r": 1.0
+          },
+          {
+            "a": "CFI",
+            "b": "CFF",
+            "r": 1.0
+          },
+          {
+            "a": "CFI",
+            "b": "Net Cash Flow",
+            "r": -1.0
+          },
+          {
+            "a": "CFF",
+            "b": "Net Cash Flow",
+            "r": -1.0
+          },
+          {
+            "a": "Sales",
+            "b": "Expenses",
+            "r": 0.996382
+          },
+          {
+            "a": "Sales",
+            "b": "Total Assets",
+            "r": 0.996156
+          },
+          {
+            "a": "Sales",
+            "b": "Equity",
+            "r": 0.996156
+          },
+          {
+            "a": "Sales",
+            "b": "Borrowings",
+            "r": 0.996156
+          },
+          {
+            "a": "Sales",
+            "b": "Total Liabilities",
+            "r": 0.996156
+          },
+          {
+            "a": "Expenses",
+            "b": "Total Assets",
+            "r": 0.992252
+          },
+          {
+            "a": "Expenses",
+            "b": "Equity",
+            "r": 0.992252
+          },
+          {
+            "a": "Expenses",
+            "b": "Borrowings",
+            "r": 0.992252
+          },
+          {
+            "a": "Expenses",
+            "b": "Total Liabilities",
+            "r": 0.992252
+          },
+          {
+            "a": "Operating Profit",
+            "b": "CFO",
+            "r": 0.971082
+          },
+          {
+            "a": "Operating Profit",
+            "b": "CFI",
+            "r": -0.971082
+          },
+          {
+            "a": "Operating Profit",
+            "b": "CFF",
+            "r": -0.971082
+          },
+          {
+            "a": "Operating Profit",
+            "b": "Net Cash Flow",
+            "r": 0.971082
+          },
+          {
+            "a": "Net Profit",
+            "b": "CFO",
+            "r": 0.971082
+          },
+          {
+            "a": "Net Profit",
+            "b": "CFI",
+            "r": -0.971082
+          },
+          {
+            "a": "Net Profit",
+            "b": "CFF",
+            "r": -0.971082
+          },
+          {
+            "a": "Net Profit",
+            "b": "Net Cash Flow",
+            "r": 0.971082
+          },
+          {
+            "a": "Total Assets",
+            "b": "CFO",
+            "r": 0.949995
+          },
+          {
+            "a": "Total Assets",
+            "b": "CFI",
+            "r": -0.949995
+          },
+          {
+            "a": "Total Assets",
+            "b": "CFF",
+            "r": -0.949995
+          },
+          {
+            "a": "Total Assets",
+            "b": "Net Cash Flow",
+            "r": 0.949995
+          },
+          {
+            "a": "Equity",
+            "b": "CFO",
+            "r": 0.949995
+          },
+          {
+            "a": "Equity",
+            "b": "CFI",
+            "r": -0.949995
+          },
+          {
+            "a": "Equity",
+            "b": "CFF",
+            "r": -0.949995
+          },
+          {
+            "a": "Equity",
+            "b": "Net Cash Flow",
+            "r": 0.949995
+          },
+          {
+            "a": "Borrowings",
+            "b": "CFO",
+            "r": 0.949995
+          },
+          {
+            "a": "Borrowings",
+            "b": "CFI",
+            "r": -0.949995
+          },
+          {
+            "a": "Borrowings",
+            "b": "CFF",
+            "r": -0.949995
+          },
+          {
+            "a": "Borrowings",
+            "b": "Net Cash Flow",
+            "r": 0.949995
+          },
+          {
+            "a": "Total Liabilities",
+            "b": "CFO",
+            "r": 0.949995
+          },
+          {
+            "a": "Total Liabilities",
+            "b": "CFI",
+            "r": -0.949995
+          },
+          {
+            "a": "Total Liabilities",
+            "b": "CFF",
+            "r": -0.949995
+          },
+          {
+            "a": "Total Liabilities",
+            "b": "Net Cash Flow",
+            "r": 0.949995
+          },
+          {
+            "a": "Sales",
+            "b": "CFO",
+            "r": 0.949091
+          },
+          {
+            "a": "Sales",
+            "b": "CFI",
+            "r": -0.949091
+          },
+          {
+            "a": "Sales",
+            "b": "CFF",
+            "r": -0.949091
+          },
+          {
+            "a": "Sales",
+            "b": "Net Cash Flow",
+            "r": 0.949091
+          },
+          {
+            "a": "Expenses",
+            "b": "CFO",
+            "r": 0.919095
+          },
+          {
+            "a": "Expenses",
+            "b": "CFI",
+            "r": -0.919095
+          },
+          {
+            "a": "Expenses",
+            "b": "CFF",
+            "r": -0.919095
+          },
+          {
+            "a": "Expenses",
+            "b": "Net Cash Flow",
+            "r": 0.919095
+          }
+        ]
+      },
+      "multicollinearity": {
+        "vif": {
+          "Sales": 230953827044640.8,
+          "Expenses": 180143985094819.84,
+          "Operating Profit": 8195813698581.431,
+          "Net Profit": 5611962152486.6,
+          "Total Assets": 2251799813685248.0,
+          "Equity": "inf",
+          "Borrowings": 900719925474099.2,
+          "Total Liabilities": "inf",
+          "CFO": 16649166829465.79,
+          "CFI": 8355472406995.3545,
+          "CFF": "inf",
+          "Net Cash Flow": "inf"
+        },
+        "interpretation": "VIF > 10 indicates severe multicollinearity; > 5 moderate.",
+        "severe_features": {
+          "Sales": 230953827044640.8,
+          "Expenses": 180143985094819.84,
+          "Operating Profit": 8195813698581.431,
+          "Net Profit": 5611962152486.6,
+          "Total Assets": 2251799813685248.0,
+          "Borrowings": 900719925474099.2,
+          "CFO": 16649166829465.79,
+          "CFI": 8355472406995.3545
+        }
+      },
+      "accounting_consistency": {
+        "operating_profit_identity": {
+          "formula": "Operating Profit = Sales - Expenses",
+          "tolerance": 0.01,
+          "rows_checked": 80,
+          "rows_satisfied": 80,
+          "rows_violated": 0,
+          "pct_satisfied": 100.0,
+          "max_relative_diff": 4e-06,
+          "mean_relative_diff": 0.0
+        },
+        "net_cash_flow_identity": {
+          "formula": "Net Cash Flow = CFO + CFI + CFF",
+          "tolerance": 0.01,
+          "rows_checked": 80,
+          "rows_satisfied": 80,
+          "rows_violated": 0,
+          "pct_satisfied": 100.0,
+          "max_relative_diff": 1.3e-05,
+          "mean_relative_diff": 3e-06
+        },
+        "balance_sheet_identity": {
+          "formula": "Total Assets = Equity + Total Liabilities",
+          "tolerance": 0.01,
+          "rows_checked": 80,
+          "rows_satisfied": 80,
+          "rows_violated": 0,
+          "pct_satisfied": 100.0,
+          "max_relative_diff": 0.0,
+          "mean_relative_diff": 0.0
+        }
+      },
+      "quarterly_continuity": {
+        "companies_checked": 10,
+        "companies_with_issues": 0,
+        "issues": [],
+        "is_continuous": true
+      },
+      "panel_balance": {
+        "quarters_per_company": {
+          "HDFC Bank": 8,
+          "Hindustan Unilever": 8,
+          "ICICI Bank": 8,
+          "ITC": 8,
+          "Infosys": 8,
+          "Maruti Suzuki": 8,
+          "ONGC": 8,
+          "Reliance Industries": 8,
+          "TCS": 8,
+          "Tata Motors": 8
+        },
+        "min_quarters": 8,
+        "max_quarters": 8,
+        "is_balanced": true,
+        "expected_rows_if_balanced": 80
+      }
+    },
+    "real": {
+      "dataset": "real",
+      "source_file": "real_anchored_quarterly_financials.csv",
+      "file_format": "csv",
+      "raw_columns": [
+        "Company",
+        "Ticker",
+        "Sector",
+        "Year",
+        "Quarter",
+        "Period",
+        "Sales (INR Cr)",
+        "Expenses (INR Cr)",
+        "Operating Profit (INR Cr)",
+        "Net Profit (INR Cr)",
+        "Total Assets (INR Cr)",
+        "Equity (INR Cr)",
+        "Borrowings (INR Cr)",
+        "Total Liabilities (INR Cr)",
+        "CFO (INR Cr)",
+        "CFI (INR Cr)",
+        "CFF (INR Cr)",
+        "Net Cash Flow (INR Cr)"
+      ],
+      "renamed_columns": {
+        "Sales (INR Cr)": "Sales",
+        "Expenses (INR Cr)": "Expenses",
+        "Operating Profit (INR Cr)": "Operating Profit",
+        "Net Profit (INR Cr)": "Net Profit",
+        "Total Assets (INR Cr)": "Total Assets",
+        "Equity (INR Cr)": "Equity",
+        "Borrowings (INR Cr)": "Borrowings",
+        "Total Liabilities (INR Cr)": "Total Liabilities",
+        "CFO (INR Cr)": "CFO",
+        "CFI (INR Cr)": "CFI",
+        "CFF (INR Cr)": "CFF",
+        "Net Cash Flow (INR Cr)": "Net Cash Flow"
+      },
+      "shape": {
+        "rows": 80,
+        "columns": 20
+      },
+      "overview": {
+        "total_observations": 80,
+        "n_companies": 10,
+        "companies": [
+          "HDFC Bank",
+          "Hindustan Unilever",
+          "ICICI Bank",
+          "ITC",
+          "Infosys",
+          "Maruti Suzuki",
+          "ONGC",
+          "Reliance Industries",
+          "TCS",
+          "Tata Motors"
+        ],
+        "n_sectors": 5,
+        "sectors": [
+          "Auto",
+          "Banking",
+          "Energy",
+          "FMCG",
+          "Tech"
+        ],
+        "n_distinct_quarters": 8,
+        "quarter_coverage": [
+          "Q1 2024",
+          "Q2 2024",
+          "Q3 2024",
+          "Q4 2024",
+          "Q1 2025",
+          "Q2 2025",
+          "Q3 2025",
+          "Q4 2025"
+        ],
+        "time_span": {
+          "start": "Q1 2024",
+          "end": "Q4 2025",
+          "year_min": 2024,
+          "year_max": 2025
+        },
+        "companies_per_sector": {
+          "Auto": 2,
+          "Banking": 2,
+          "Energy": 2,
+          "FMCG": 2,
+          "Tech": 2
+        }
+      },
+      "features": {
+        "identifier_columns": [
+          "Company",
+          "Ticker",
+          "Sector",
+          "Year",
+          "Quarter",
+          "Period"
+        ],
+        "numeric_columns": [
+          "Sales",
+          "Expenses",
+          "Operating Profit",
+          "Net Profit",
+          "Total Assets",
+          "Equity",
+          "Borrowings",
+          "Total Liabilities",
+          "CFO",
+          "CFI",
+          "CFF",
+          "Net Cash Flow"
+        ],
+        "engineered_columns": [
+          "quarter_num",
+          "time_index"
+        ],
+        "dtypes": {
+          "Company": "object",
+          "Ticker": "object",
+          "Sector": "object",
+          "Year": "int64",
+          "Quarter": "object",
+          "Period": "object",
+          "Sales": "float64",
+          "Expenses": "float64",
+          "Operating Profit": "float64",
+          "Net Profit": "float64",
+          "Total Assets": "float64",
+          "Equity": "float64",
+          "Borrowings": "float64",
+          "Total Liabilities": "float64",
+          "CFO": "float64",
+          "CFI": "float64",
+          "CFF": "float64",
+          "Net Cash Flow": "float64",
+          "quarter_num": "int64",
+          "time_index": "int64"
+        }
+      },
+      "missing_values": {
+        "total_missing_cells": 0,
+        "columns_with_missing": {},
+        "rows_with_any_missing": 0
+      },
+      "duplicates": {
+        "full_row_duplicates": 0,
+        "panel_key": [
+          "Company",
+          "Year",
+          "Quarter"
+        ],
+        "duplicate_company_quarter_records": 0,
+        "duplicate_company_quarter_keys": []
+      },
+      "descriptive_statistics": {
+        "Sales": {
+          "count": 80.0,
+          "mean": 92687.140625,
+          "std": 76173.612014,
+          "min": 14601.05,
+          "25%": 37832.965,
+          "50%": 63368.88,
+          "75%": 131877.5825,
+          "max": 283463.84,
+          "skew": 1.02087,
+          "kurtosis": 0.084954
+        },
+        "Expenses": {
+          "count": 80.0,
+          "mean": 77090.27475,
+          "std": 69036.913886,
+          "min": 10156.85,
+          "25%": 27612.3875,
+          "50%": 47622.165,
+          "75%": 104572.965,
+          "max": 252524.61,
+          "skew": 1.131188,
+          "kurtosis": 0.243195
+        },
+        "Operating Profit": {
+          "count": 80.0,
+          "mean": 15596.86525,
+          "std": 8955.277831,
+          "min": 3249.26,
+          "25%": 6778.9725,
+          "50%": 15249.795,
+          "75%": 24341.4025,
+          "max": 31839.51,
+          "skew": 0.286233,
+          "kurtosis": -1.167448
+        },
+        "Net Profit": {
+          "count": 80.0,
+          "mean": 11594.833375,
+          "std": 6669.292391,
+          "min": 2444.33,
+          "25%": 4908.9325,
+          "50%": 11564.465,
+          "75%": 18463.405,
+          "max": 26698.13,
+          "skew": 0.294256,
+          "kurtosis": -1.05943
+        },
+        "Total Assets": {
+          "count": 80.0,
+          "mean": 920552.564125,
+          "std": 1154013.318999,
+          "min": 74123.49,
+          "25%": 97852.4625,
+          "50%": 250828.615,
+          "75%": 1755633.0575,
+          "max": 3593943.23,
+          "skew": 1.219214,
+          "kurtosis": 0.084478
+        },
+        "Equity": {
+          "count": 80.0,
+          "mean": 401221.1575,
+          "std": 507546.381061,
+          "min": 31000.34,
+          "25%": 43621.105,
+          "50%": 96106.09,
+          "75%": 737364.8775,
+          "max": 1815136.01,
+          "skew": 1.265173,
+          "kurtosis": 0.256494
+        },
+        "Borrowings": {
+          "count": 80.0,
+          "mean": 462612.3105,
+          "std": 755237.338407,
+          "min": 16414.1,
+          "25%": 26894.8525,
+          "50%": 62309.33,
+          "75%": 399016.56,
+          "max": 2336063.1,
+          "skew": 1.628873,
+          "kurtosis": 1.065335
+        },
+        "Total Liabilities": {
+          "count": 80.0,
+          "mean": 665767.810375,
+          "std": 977086.46724,
+          "min": 37061.75,
+          "25%": 48926.23,
+          "50%": 125414.31,
+          "75%": 877816.525,
+          "max": 3054851.75,
+          "skew": 1.510292,
+          "kurtosis": 0.816673
+        },
+        "CFO": {
+          "count": 80.0,
+          "mean": 25403.12125,
+          "std": 22031.875448,
+          "min": 3568.44,
+          "25%": 6218.58,
+          "50%": 18473.795,
+          "75%": 45860.135,
+          "max": 74119.56,
+          "skew": 0.920264,
+          "kurtosis": -0.396458
+        },
+        "CFI": {
+          "count": 80.0,
+          "mean": -14054.87025,
+          "std": 12515.043509,
+          "min": -50283.7,
+          "25%": -23070.875,
+          "50%": -10069.41,
+          "75%": -3774.7975,
+          "max": -1554.46,
+          "skew": -1.005045,
+          "kurtosis": -0.036667
+        },
+        "CFF": {
+          "count": 80.0,
+          "mean": -5404.719625,
+          "std": 4798.943721,
+          "min": -19878.02,
+          "25%": -9398.3,
+          "50%": -3881.99,
+          "75%": -1423.0875,
+          "max": -458.67,
+          "skew": -0.91785,
+          "kurtosis": -0.232549
+        },
+        "Net Cash Flow": {
+          "count": 80.0,
+          "mean": 5943.5315,
+          "std": 6676.476006,
+          "min": 249.31,
+          "25%": 1362.3675,
+          "50%": 3252.01,
+          "75%": 8288.0075,
+          "max": 27582.54,
+          "skew": 1.77132,
+          "kurtosis": 2.645104
+        }
+      },
+      "outliers": {
+        "Sales": {
+          "count": 2,
+          "lower_fence": -103233.96125,
+          "upper_fence": 272944.50875,
+          "min": 14601.05,
+          "max": 283463.84
+        },
+        "Expenses": {
+          "count": 5,
+          "lower_fence": -87828.47875,
+          "upper_fence": 220013.83125,
+          "min": 10156.85,
+          "max": 252524.61
+        },
+        "Operating Profit": {
+          "count": 0,
+          "lower_fence": -19564.6725,
+          "upper_fence": 50685.0475,
+          "min": 3249.26,
+          "max": 31839.51
+        },
+        "Net Profit": {
+          "count": 0,
+          "lower_fence": -15422.77625,
+          "upper_fence": 38795.11375,
+          "min": 2444.33,
+          "max": 26698.13
+        },
+        "Total Assets": {
+          "count": 0,
+          "lower_fence": -2388818.43,
+          "upper_fence": 4242303.95,
+          "min": 74123.49,
+          "max": 3593943.23
+        },
+        "Equity": {
+          "count": 1,
+          "lower_fence": -996994.55375,
+          "upper_fence": 1777980.53625,
+          "min": 31000.34,
+          "max": 1815136.01
+        },
+        "Borrowings": {
+          "count": 16,
+          "lower_fence": -531287.70875,
+          "upper_fence": 957199.12125,
+          "min": 16414.1,
+          "max": 2336063.1
+        },
+        "Total Liabilities": {
+          "count": 8,
+          "lower_fence": -1194409.2125,
+          "upper_fence": 2121151.9675,
+          "min": 37061.75,
+          "max": 3054851.75
+        },
+        "CFO": {
+          "count": 0,
+          "lower_fence": -53243.7525,
+          "upper_fence": 105322.4675,
+          "min": 3568.44,
+          "max": 74119.56
+        },
+        "CFI": {
+          "count": 0,
+          "lower_fence": -52014.99125,
+          "upper_fence": 25169.31875,
+          "min": -50283.7,
+          "max": -1554.46
+        },
+        "CFF": {
+          "count": 0,
+          "lower_fence": -21361.11875,
+          "upper_fence": 10539.73125,
+          "min": -19878.02,
+          "max": -458.67
+        },
+        "Net Cash Flow": {
+          "count": 6,
+          "lower_fence": -9026.0925,
+          "upper_fence": 18676.4675,
+          "min": 249.31,
+          "max": 27582.54
+        },
+        "_total_outlier_cells": 38
+      },
+      "distributions": {
+        "Sales": {
+          "mean": 92687.140625,
+          "median": 63368.88,
+          "std": 76173.612014,
+          "min": 14601.05,
+          "p25": 37832.965,
+          "p50": 63368.88,
+          "p75": 131877.5825,
+          "max": 283463.84,
+          "skew": 1.020870475285962,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Expenses": {
+          "mean": 77090.27475,
+          "median": 47622.165,
+          "std": 69036.913886,
+          "min": 10156.85,
+          "p25": 27612.3875,
+          "p50": 47622.165,
+          "p75": 104572.965,
+          "max": 252524.61,
+          "skew": 1.1311881772796706,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Operating Profit": {
+          "mean": 15596.86525,
+          "median": 15249.795,
+          "std": 8955.277831,
+          "min": 3249.26,
+          "p25": 6778.9725,
+          "p50": 15249.795,
+          "p75": 24341.4025,
+          "max": 31839.51,
+          "skew": 0.2862331000086469,
+          "shape": "approximately symmetric",
+          "has_negative": false
+        },
+        "Net Profit": {
+          "mean": 11594.833375,
+          "median": 11564.465,
+          "std": 6669.292391,
+          "min": 2444.33,
+          "p25": 4908.9325,
+          "p50": 11564.465,
+          "p75": 18463.405,
+          "max": 26698.13,
+          "skew": 0.29425634336899026,
+          "shape": "approximately symmetric",
+          "has_negative": false
+        },
+        "Total Assets": {
+          "mean": 920552.564125,
+          "median": 250828.615,
+          "std": 1154013.318999,
+          "min": 74123.49,
+          "p25": 97852.4625,
+          "p50": 250828.615,
+          "p75": 1755633.0575,
+          "max": 3593943.23,
+          "skew": 1.2192142362010214,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Equity": {
+          "mean": 401221.1575,
+          "median": 96106.09,
+          "std": 507546.381061,
+          "min": 31000.34,
+          "p25": 43621.105,
+          "p50": 96106.09,
+          "p75": 737364.8775,
+          "max": 1815136.01,
+          "skew": 1.2651725584223865,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Borrowings": {
+          "mean": 462612.3105,
+          "median": 62309.33,
+          "std": 755237.338407,
+          "min": 16414.1,
+          "p25": 26894.8525,
+          "p50": 62309.33,
+          "p75": 399016.56,
+          "max": 2336063.1,
+          "skew": 1.6288729226267886,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "Total Liabilities": {
+          "mean": 665767.810375,
+          "median": 125414.31,
+          "std": 977086.46724,
+          "min": 37061.75,
+          "p25": 48926.23,
+          "p50": 125414.31,
+          "p75": 877816.525,
+          "max": 3054851.75,
+          "skew": 1.5102919352705853,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "CFO": {
+          "mean": 25403.12125,
+          "median": 18473.795,
+          "std": 22031.875448,
+          "min": 3568.44,
+          "p25": 6218.58,
+          "p50": 18473.795,
+          "p75": 45860.135,
+          "max": 74119.56,
+          "skew": 0.92026360104828,
+          "shape": "right-skewed",
+          "has_negative": false
+        },
+        "CFI": {
+          "mean": -14054.87025,
+          "median": -10069.41,
+          "std": 12515.043509,
+          "min": -50283.7,
+          "p25": -23070.875,
+          "p50": -10069.41,
+          "p75": -3774.7975,
+          "max": -1554.46,
+          "skew": -1.005045081603261,
+          "shape": "left-skewed",
+          "has_negative": true
+        },
+        "CFF": {
+          "mean": -5404.719625,
+          "median": -3881.99,
+          "std": 4798.943721,
+          "min": -19878.02,
+          "p25": -9398.3,
+          "p50": -3881.99,
+          "p75": -1423.0875,
+          "max": -458.67,
+          "skew": -0.9178498850428862,
+          "shape": "left-skewed",
+          "has_negative": true
+        },
+        "Net Cash Flow": {
+          "mean": 5943.5315,
+          "median": 3252.01,
+          "std": 6676.476006,
+          "min": 249.31,
+          "p25": 1362.3675,
+          "p50": 3252.01,
+          "p75": 8288.0075,
+          "max": 27582.54,
+          "skew": 1.7713199945907567,
+          "shape": "right-skewed",
+          "has_negative": false
+        }
+      },
+      "correlation_matrix": {
+        "matrix": {
+          "Sales": {
+            "Sales": 1.0,
+            "Expenses": 0.997218,
+            "Operating Profit": 0.818377,
+            "Net Profit": 0.826126,
+            "Total Assets": 0.431842,
+            "Equity": 0.411419,
+            "Borrowings": 0.181624,
+            "Total Liabilities": 0.272866,
+            "CFO": 0.589371,
+            "CFI": -0.560427,
+            "CFF": -0.625076,
+            "Net Cash Flow": 0.445067
+          },
+          "Expenses": {
+            "Sales": 0.997218,
+            "Expenses": 1.0,
+            "Operating Profit": 0.773259,
+            "Net Profit": 0.783487,
+            "Total Assets": 0.399158,
+            "Equity": 0.37988,
+            "Borrowings": 0.144564,
+            "Total Liabilities": 0.237083,
+            "CFO": 0.550784,
+            "CFI": -0.523055,
+            "CFF": -0.591009,
+            "Net Cash Flow": 0.412274
+          },
+          "Operating Profit": {
+            "Sales": 0.818377,
+            "Expenses": 0.773259,
+            "Operating Profit": 1.0,
+            "Net Profit": 0.98707,
+            "Total Assets": 0.596109,
+            "Equity": 0.571005,
+            "Borrowings": 0.430442,
+            "Total Liabilities": 0.493306,
+            "CFO": 0.767153,
+            "CFI": -0.734721,
+            "CFF": -0.760765,
+            "Net Cash Flow": 0.607488
+          },
+          "Net Profit": {
+            "Sales": 0.826126,
+            "Expenses": 0.783487,
+            "Operating Profit": 0.98707,
+            "Net Profit": 1.0,
+            "Total Assets": 0.611888,
+            "Equity": 0.591591,
+            "Borrowings": 0.445706,
+            "Total Liabilities": 0.508054,
+            "CFO": 0.783465,
+            "CFI": -0.759876,
+            "CFF": -0.781068,
+            "Net Cash Flow": 0.59957
+          },
+          "Total Assets": {
+            "Sales": 0.431842,
+            "Expenses": 0.399158,
+            "Operating Profit": 0.596109,
+            "Net Profit": 0.611888,
+            "Total Assets": 1.0,
+            "Equity": 0.989948,
+            "Borrowings": 0.958765,
+            "Total Liabilities": 0.983041,
+            "CFO": 0.970914,
+            "CFI": -0.942082,
+            "CFF": -0.886959,
+            "Net Cash Flow": 0.800482
+          },
+          "Equity": {
+            "Sales": 0.411419,
+            "Expenses": 0.37988,
+            "Operating Profit": 0.571005,
+            "Net Profit": 0.591591,
+            "Total Assets": 0.989948,
+            "Equity": 1.0,
+            "Borrowings": 0.95485,
+            "Total Liabilities": 0.976881,
+            "CFO": 0.956872,
+            "CFI": -0.946883,
+            "CFF": -0.880257,
+            "Net Cash Flow": 0.749962
+          },
+          "Borrowings": {
+            "Sales": 0.181624,
+            "Expenses": 0.144564,
+            "Operating Profit": 0.430442,
+            "Net Profit": 0.445706,
+            "Total Assets": 0.958765,
+            "Equity": 0.95485,
+            "Borrowings": 1.0,
+            "Total Liabilities": 0.994305,
+            "CFO": 0.888211,
+            "CFI": -0.866704,
+            "CFF": -0.774838,
+            "Net Cash Flow": 0.749453
+          },
+          "Total Liabilities": {
+            "Sales": 0.272866,
+            "Expenses": 0.237083,
+            "Operating Profit": 0.493306,
+            "Net Profit": 0.508054,
+            "Total Assets": 0.983041,
+            "Equity": 0.976881,
+            "Borrowings": 0.994305,
+            "Total Liabilities": 1.0,
+            "CFO": 0.926158,
+            "CFI": -0.901757,
+            "CFF": -0.822063,
+            "Net Cash Flow": 0.775026
+          },
+          "CFO": {
+            "Sales": 0.589371,
+            "Expenses": 0.550784,
+            "Operating Profit": 0.767153,
+            "Net Profit": 0.783465,
+            "Total Assets": 0.970914,
+            "Equity": 0.956872,
+            "Borrowings": 0.888211,
+            "Total Liabilities": 0.926158,
+            "CFO": 1.0,
+            "CFI": -0.970206,
+            "CFF": -0.933312,
+            "Net Cash Flow": 0.810426
+          },
+          "CFI": {
+            "Sales": -0.560427,
+            "Expenses": -0.523055,
+            "Operating Profit": -0.734721,
+            "Net Profit": -0.759876,
+            "Total Assets": -0.942082,
+            "Equity": -0.946883,
+            "Borrowings": -0.866704,
+            "Total Liabilities": -0.901757,
+            "CFO": -0.970206,
+            "CFI": 1.0,
+            "CFF": 0.931608,
+            "Net Cash Flow": -0.657484
+          },
+          "CFF": {
+            "Sales": -0.625076,
+            "Expenses": -0.591009,
+            "Operating Profit": -0.760765,
+            "Net Profit": -0.781068,
+            "Total Assets": -0.886959,
+            "Equity": -0.880257,
+            "Borrowings": -0.774838,
+            "Total Liabilities": -0.822063,
+            "CFO": -0.933312,
+            "CFI": 0.931608,
+            "CFF": 1.0,
+            "Net Cash Flow": -0.614779
+          },
+          "Net Cash Flow": {
+            "Sales": 0.445067,
+            "Expenses": 0.412274,
+            "Operating Profit": 0.607488,
+            "Net Profit": 0.59957,
+            "Total Assets": 0.800482,
+            "Equity": 0.749962,
+            "Borrowings": 0.749453,
+            "Total Liabilities": 0.775026,
+            "CFO": 0.810426,
+            "CFI": -0.657484,
+            "CFF": -0.614779,
+            "Net Cash Flow": 1.0
+          }
+        },
+        "high_correlation_pairs": [
+          {
+            "a": "Sales",
+            "b": "Expenses",
+            "r": 0.997218
+          },
+          {
+            "a": "Borrowings",
+            "b": "Total Liabilities",
+            "r": 0.994305
+          },
+          {
+            "a": "Total Assets",
+            "b": "Equity",
+            "r": 0.989948
+          },
+          {
+            "a": "Operating Profit",
+            "b": "Net Profit",
+            "r": 0.98707
+          },
+          {
+            "a": "Total Assets",
+            "b": "Total Liabilities",
+            "r": 0.983041
+          },
+          {
+            "a": "Equity",
+            "b": "Total Liabilities",
+            "r": 0.976881
+          },
+          {
+            "a": "Total Assets",
+            "b": "CFO",
+            "r": 0.970914
+          },
+          {
+            "a": "CFO",
+            "b": "CFI",
+            "r": -0.970206
+          },
+          {
+            "a": "Total Assets",
+            "b": "Borrowings",
+            "r": 0.958765
+          },
+          {
+            "a": "Equity",
+            "b": "CFO",
+            "r": 0.956872
+          },
+          {
+            "a": "Equity",
+            "b": "Borrowings",
+            "r": 0.95485
+          },
+          {
+            "a": "Equity",
+            "b": "CFI",
+            "r": -0.946883
+          },
+          {
+            "a": "Total Assets",
+            "b": "CFI",
+            "r": -0.942082
+          },
+          {
+            "a": "CFO",
+            "b": "CFF",
+            "r": -0.933312
+          },
+          {
+            "a": "CFI",
+            "b": "CFF",
+            "r": 0.931608
+          },
+          {
+            "a": "Total Liabilities",
+            "b": "CFO",
+            "r": 0.926158
+          },
+          {
+            "a": "Total Liabilities",
+            "b": "CFI",
+            "r": -0.901757
+          }
+        ]
+      },
+      "multicollinearity": {
+        "vif": {
+          "Sales": 250199979298360.88,
+          "Expenses": 204709073971386.2,
+          "Operating Profit": 3441803307123.0386,
+          "Net Profit": 3458985888917.4316,
+          "Total Assets": 23274416678917.293,
+          "Equity": 76.815824,
+          "Borrowings": 1177.791997,
+          "Total Liabilities": 3193.979682,
+          "CFO": 39505259889214.875,
+          "CFI": 6731838008027.647,
+          "CFF": 989802115905.6035,
+          "Net Cash Flow": 1915610220064.0137
+        },
+        "interpretation": "VIF > 10 indicates severe multicollinearity; > 5 moderate.",
+        "severe_features": {
+          "Sales": 250199979298360.88,
+          "Expenses": 204709073971386.2,
+          "Operating Profit": 3441803307123.0386,
+          "Net Profit": 3458985888917.4316,
+          "Total Assets": 23274416678917.293,
+          "Equity": 76.815824,
+          "Borrowings": 1177.791997,
+          "Total Liabilities": 3193.979682,
+          "CFO": 39505259889214.875,
+          "CFI": 6731838008027.647,
+          "CFF": 989802115905.6035,
+          "Net Cash Flow": 1915610220064.0137
+        }
+      },
+      "accounting_consistency": {
+        "operating_profit_identity": {
+          "formula": "Operating Profit = Sales - Expenses",
+          "tolerance": 0.01,
+          "rows_checked": 80,
+          "rows_satisfied": 80,
+          "rows_violated": 0,
+          "pct_satisfied": 100.0,
+          "max_relative_diff": 3e-06,
+          "mean_relative_diff": 0.0
+        },
+        "net_cash_flow_identity": {
+          "formula": "Net Cash Flow = CFO + CFI + CFF",
+          "tolerance": 0.01,
+          "rows_checked": 80,
+          "rows_satisfied": 80,
+          "rows_violated": 0,
+          "pct_satisfied": 100.0,
+          "max_relative_diff": 1.6e-05,
+          "mean_relative_diff": 1e-06
+        },
+        "balance_sheet_identity": {
+          "formula": "Total Assets = Equity + Total Liabilities",
+          "tolerance": 0.01,
+          "rows_checked": 80,
+          "rows_satisfied": 4,
+          "rows_violated": 76,
+          "pct_satisfied": 5.0,
+          "max_relative_diff": 0.384357,
+          "mean_relative_diff": 0.10993
+        }
+      },
+      "quarterly_continuity": {
+        "companies_checked": 10,
+        "companies_with_issues": 0,
+        "issues": [],
+        "is_continuous": true
+      },
+      "panel_balance": {
+        "quarters_per_company": {
+          "HDFC Bank": 8,
+          "Hindustan Unilever": 8,
+          "ICICI Bank": 8,
+          "ITC": 8,
+          "Infosys": 8,
+          "Maruti Suzuki": 8,
+          "ONGC": 8,
+          "Reliance Industries": 8,
+          "TCS": 8,
+          "Tata Motors": 8
+        },
+        "min_quarters": 8,
+        "max_quarters": 8,
+        "is_balanced": true,
+        "expected_rows_if_balanced": 80
+      }
+    }
+  },
+  "comparison": {
+    "datasets": [
+      "mock",
+      "real"
+    ],
+    "schema_differences": {
+      "raw_headers_identical": false,
+      "raw_only_in_a": [
+        "Borrowings",
+        "CFF",
+        "CFI",
+        "CFO",
+        "Equity",
+        "Expenses",
+        "Net Cash Flow",
+        "Net Profit",
+        "Operating Profit",
+        "Sales",
+        "Total Assets",
+        "Total Liabilities"
+      ],
+      "raw_only_in_b": [
+        "Borrowings (INR Cr)",
+        "CFF (INR Cr)",
+        "CFI (INR Cr)",
+        "CFO (INR Cr)",
+        "Equity (INR Cr)",
+        "Expenses (INR Cr)",
+        "Net Cash Flow (INR Cr)",
+        "Net Profit (INR Cr)",
+        "Operating Profit (INR Cr)",
+        "Sales (INR Cr)",
+        "Total Assets (INR Cr)",
+        "Total Liabilities (INR Cr)"
+      ],
+      "canonical_columns_identical": true,
+      "canonical_only_in_a": [],
+      "canonical_only_in_b": [],
+      "note": "Raw headers differ only by unit suffixes; both map to an identical canonical schema."
+    },
+    "datatype_differences": {
+      "differing_columns": {},
+      "identical": true
+    },
+    "key_overlap": {
+      "n_keys_a": 80,
+      "n_keys_b": 80,
+      "n_shared_keys": 80,
+      "n_only_in_a": 0,
+      "n_only_in_b": 0,
+      "only_in_a": [],
+      "only_in_b": []
+    },
+    "value_conflicts": {
+      "shared_keys": 80,
+      "identical_rows": 0,
+      "conflicting_rows": 80,
+      "pct_conflicting": 100.0,
+      "conflicts_per_column": {
+        "Sales": 80,
+        "Expenses": 80,
+        "Operating Profit": 80,
+        "Net Profit": 80,
+        "Total Assets": 80,
+        "Equity": 80,
+        "Borrowings": 80,
+        "Total Liabilities": 80,
+        "CFO": 80,
+        "CFI": 80,
+        "CFF": 80,
+        "Net Cash Flow": 80
+      },
+      "max_relative_diff_per_column": {
+        "Sales": 0.6324,
+        "Expenses": 0.83,
+        "Operating Profit": 1.6636,
+        "Net Profit": 1.5041,
+        "Total Assets": 11.4938,
+        "Equity": 11.1516,
+        "Borrowings": 26.07,
+        "Total Liabilities": 20.2395,
+        "CFO": 2.3695,
+        "CFI": 2.6351,
+        "CFF": 3.311,
+        "Net Cash Flow": 4.5341
+      },
+      "example_conflicts": [
+        {
+          "key": "HDFC Bank | 2024 | Q1",
+          "column": "Borrowings",
+          "value_a": 86966.1,
+          "value_b": 2234742.61,
+          "relative_diff": 24.6967
+        },
+        {
+          "key": "HDFC Bank | 2024 | Q2",
+          "column": "Borrowings",
+          "value_a": 89624.18,
+          "value_b": 2207958.77,
+          "relative_diff": 23.6357
+        },
+        {
+          "key": "HDFC Bank | 2024 | Q3",
+          "column": "Borrowings",
+          "value_a": 92500.38,
+          "value_b": 2266348.11,
+          "relative_diff": 23.501
+        }
+      ]
+    },
+    "relationship": {
+      "label": "overlapping",
+      "description": "The datasets cover an identical set of company-quarter keys."
+    },
+    "recommended_merge_strategy": {
+      "recommended": "source_tagged_pool",
+      "configured": "source_tagged_pool",
+      "matches_config": true,
+      "rationale": "The two datasets describe the SAME company-quarter keys but 100.0% of shared rows carry conflicting values. Silently stacking would create ambiguous duplicate keys, and picking one source discards real signal. The safest option that preserves all information is to keep both and tag provenance with a `source` column, making the panel key (source, Company, Year, Quarter). 'prefer_real' is the more conservative single-record alternative.",
+      "warning": "Do NOT blindly stack: shared keys with conflicting values would otherwise become undetected duplicate company-quarter records."
+    }
+  },
+  "build_decisions": {
+    "strategy": "source_tagged_pool",
+    "exact_duplicate_rows_removed": 0,
+    "strategy_detail": "Both sources retained with provenance tag; effective panel key is (source, Company, Year, Quarter).",
+    "duplicate_full_key_rows": 0,
+    "sorted_by": [
+      "source",
+      "Company",
+      "time_index"
+    ],
+    "macroeconomic_columns_present": [],
+    "final_rows": 160,
+    "final_columns": [
+      "Company",
+      "Ticker",
+      "Sector",
+      "Year",
+      "Quarter",
+      "Period",
+      "quarter_num",
+      "time_index",
+      "source",
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "Net Profit",
+      "Total Assets",
+      "Equity",
+      "Borrowings",
+      "Total Liabilities",
+      "CFO",
+      "CFI",
+      "CFF",
+      "Net Cash Flow"
+    ]
+  },
+  "validation": {
+    "strategy": "source_tagged_pool",
+    "effective_panel_key": [
+      "source",
+      "Company",
+      "Year",
+      "Quarter"
+    ],
+    "all_checks_passed": true,
+    "checks": {
+      "no_duplicate_company_quarter": {
+        "passed": true,
+        "duplicates_on_effective_key": 0,
+        "duplicates_on_base_key": 80,
+        "info": "80 rows share (Company, Year, Quarter) across sources \u2014 expected by design under source_tagged_pool; each is uniquely identified by adding the 'source' provenance tag."
+      },
+      "correct_quarterly_ordering": {
+        "passed": true,
+        "grouped_by": [
+          "source",
+          "Company"
+        ],
+        "unordered_groups": []
+      },
+      "no_broken_accounting_identities": {
+        "passed": true,
+        "note": "Identities are validated on the merged data. The builder never recomputes financials, so any violation is inherited from the source datasets, not introduced by merging.",
+        "identities": {
+          "operating_profit_identity": {
+            "formula": "Operating Profit = Sales - Expenses",
+            "rows_violated": 0,
+            "pct_satisfied": 100.0,
+            "max_relative_diff": 4e-06
+          },
+          "net_cash_flow_identity": {
+            "formula": "Net Cash Flow = CFO + CFI + CFF",
+            "rows_violated": 0,
+            "pct_satisfied": 100.0,
+            "max_relative_diff": 1.6e-05
+          },
+          "balance_sheet_identity": {
+            "formula": "Total Assets = Equity + Total Liabilities",
+            "rows_violated": 76,
+            "pct_satisfied": 52.5,
+            "max_relative_diff": 0.384357
+          }
+        }
+      },
+      "correct_datatypes": {
+        "passed": true,
+        "wrong_dtype_columns": {}
+      },
+      "no_obvious_leakage": {
+        "zero_variance_columns": [],
+        "value_identical_column_pairs": [],
+        "suspicious_forward_looking_columns": [],
+        "passed": true,
+        "note": "Value-identical column pairs are reported for awareness; in these datasets some balance-sheet fields may coincide by construction. They are flagged so feature engineering in Phase 3 can avoid using redundant columns, but are not necessarily errors."
+      }
+    }
+  }
+}

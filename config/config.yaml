@@ -1,0 +1,427 @@
+# ==========================================================================
+# MacroRisk AI — Configuration (single source of truth)
+# ==========================================================================
+# Phase 1 uses only the `data`, `schema`, `merge`, and `paths` sections.
+# Later phases will extend this file (features, targets, models, evaluation).
+# Nothing about the datasets is hardcoded in the source; everything the
+# pipeline needs to locate and interpret the inputs lives here.
+# ==========================================================================
+
+project:
+  name: MacroRisk AI
+  phase: 2
+
+paths:
+  project_root: "."
+  raw_dir: "data/raw"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+  reports_dir: "reports/phase1"
+  reports_phase2_dir: "reports/phase2"
+  master_dataset: "master_quarterly_dataset.csv"
+  # Phase 2 outputs
+  synthetic_dir: "data/synthetic"
+  macro_dir: "data/macro"
+  synthetic_macro_file: "synthetic_macro_TEMPORARY.csv"
+  synthetic_companies_file: "synthetic_companies_TEMPORARY.csv"
+  training_dataset: "phase2_training_dataset.csv"
+
+# --------------------------------------------------------------------------
+# Input datasets. `stem` is matched against files in project_root with any
+# supported extension (.csv/.xlsx/.xls); format is auto-detected.
+# --------------------------------------------------------------------------
+data:
+  datasets:
+    - name: mock
+      stem: "mock_quarterly_financials"
+    - name: real
+      stem: "real_anchored_quarterly_financials"
+  supported_extensions: [".csv", ".xlsx", ".xls"]
+
+# --------------------------------------------------------------------------
+# Canonical schema. Column labels in the raw files may carry unit suffixes
+# (e.g. "Sales (INR Cr)"); these are normalized to the canonical names below.
+# --------------------------------------------------------------------------
+schema:
+  # Regex stripped from every raw column header during normalization.
+  unit_suffix_pattern: '\s*\(INR Cr\)\s*$'
+  identifier_columns: [Company, Ticker, Sector, Year, Quarter, Period]
+  numeric_columns:
+    - Sales
+    - Expenses
+    - Operating Profit
+    - Net Profit
+    - Total Assets
+    - Equity
+    - Borrowings
+    - Total Liabilities
+    - CFO
+    - CFI
+    - CFF
+    - Net Cash Flow
+  entity_key: Company
+  time_columns: [Year, Quarter]
+  # Composite key that must be unique *within a single source dataset*.
+  panel_key: [Company, Year, Quarter]
+
+# --------------------------------------------------------------------------
+# Accounting identities checked during the audit. Each is validated with a
+# relative tolerance; violations are reported, never silently "fixed".
+# --------------------------------------------------------------------------
+accounting_identities:
+  relative_tolerance: 0.01   # 1%
+  identities:
+    - name: operating_profit_identity
+      formula: "Operating Profit = Sales - Expenses"
+      lhs: "Operating Profit"
+      rhs_add: [Sales]
+      rhs_sub: [Expenses]
+    - name: net_cash_flow_identity
+      formula: "Net Cash Flow = CFO + CFI + CFF"
+      lhs: "Net Cash Flow"
+      rhs_add: [CFO, CFI, CFF]
+      rhs_sub: []
+    - name: balance_sheet_identity
+      formula: "Total Assets = Equity + Total Liabilities"
+      lhs: "Total Assets"
+      rhs_add: [Equity, Total Liabilities]
+      rhs_sub: []
+
+# --------------------------------------------------------------------------
+# Merge strategy for building the canonical master dataset.
+#   source_tagged_pool : keep both datasets, tag provenance with `source`.
+#                        Panel key becomes (source, Company, Year, Quarter).
+#   prefer_real        : one row per (Company, Year, Quarter); on conflict
+#                        keep the `real` value (more conservative).
+#   reconcile_mean     : one row per (Company, Year, Quarter); average the
+#                        two sources' numeric values.
+# The comparator inspects the data and recommends a strategy; the builder
+# executes the one selected here.
+# --------------------------------------------------------------------------
+merge:
+  strategy: source_tagged_pool
+  provenance_column: source
+  conflict_relative_tolerance: 0.0001   # rows closer than this are "identical"
+
+reproducibility:
+  random_seed: 42
+
+# ==========================================================================
+# PHASE 2 — SYNTHETIC DATA (DEVELOPMENT ONLY)
+# ==========================================================================
+# IMPORTANT: Everything generated under `synthetic` and the `macro` synthetic
+# provider is a TEMPORARY development placeholder used only to enlarge the
+# dataset and exercise the pipeline. It is NOT real data. Any model trained on
+# it is for pipeline validation, not production evaluation. Real historical
+# macro data can replace the synthetic macro by switching `macro.provider` to
+# `historical` and supplying a file — no pipeline code changes required.
+# ==========================================================================
+
+synthetic:
+  enabled: true
+  random_seed: 42
+  disclaimer: >-
+    DEVELOPMENT-ONLY synthetic data. Not real financials. For pipeline
+    validation only; not for production evaluation or reporting.
+
+  # ------------------------------------------------------------------------
+  # Generation method.
+  #   copula_temporal : (current) sector-conditional Gaussian copula over the
+  #                     independent economic drivers, evolved across quarters
+  #                     with calibrated AR / mean-reverting dynamics, and
+  #                     reconstructed into financials via accounting identities.
+  #                     Preserves marginals + covariance + correlation + sector
+  #                     structure + temporal behaviour + identities at scale.
+  #   sector_sim      : (legacy) sector-median ratios + independent jitter.
+  #                     Retained for reference; does NOT preserve joint
+  #                     dependence, so not used for large-N generation.
+  # ------------------------------------------------------------------------
+  method: copula_temporal
+
+  # Target size of the synthetic company-quarter dataset (~4000-5000).
+  # n_companies_per_sector is derived from this and the number of quarters.
+  target_total_rows: 4500
+
+  copula:
+    # Ledoit-Wolf-style shrinkage of the driver correlation matrix toward the
+    # identity to keep it well-conditioned given few real rows per sector.
+    shrinkage: 0.10
+    # Drivers with std below this (within a sector) are treated as constant
+    # and reconstructed from their empirical value, not the copula.
+    min_driver_std: 1.0e-8
+
+  temporal:
+    # AR(1) coefficient and mean-reversion for each company's quarterly path.
+    sales_growth_ar_phi: 0.40
+    mean_revert: 0.15
+    # Global multiplier on temporal perturbation; the refine loop shrinks this
+    # if marginal fidelity is insufficient. Bounded by [floor, init].
+    noise_scale_init: 1.00
+    noise_scale_floor: 0.40
+    noise_scale_decay: 0.60
+
+  # Legacy sector_sim parameters (kept for the reference method only).
+  companies:
+    enabled: true
+    n_per_sector: 10
+    sales_growth_ar_phi: 0.5
+    sales_growth_mean: 0.02
+    sales_growth_std: 0.025
+    ratio_jitter_std: 0.03
+    scale_log_std: 0.35
+
+  # ------------------------------------------------------------------------
+  # Fidelity validation + automatic refinement. Synthetic data is compared to
+  # the real reference (all non-synthetic observations). If acceptance is not
+  # met, temporal noise is reduced and generation repeats up to
+  # max_refine_iterations; the best iteration is kept.
+  # ------------------------------------------------------------------------
+  validation:
+    max_refine_iterations: 6
+    acceptance:
+      median_ks_max: 0.15          # median 2-sample KS across features
+      max_ks_max: 0.35             # worst-feature KS
+      mean_wasserstein_std_max: 0.25   # mean Wasserstein / real std
+      corr_mae_max: 0.10           # mean abs error of correlation matrices
+
+# --------------------------------------------------------------------------
+# Macroeconomic data — provider-based so the synthetic placeholder can be
+# swapped for real history without touching the pipeline. The assembler only
+# ever calls `MacroProvider.get_macro_panel(quarters)`; every provider returns
+# the SAME schema (join_key + variables + provenance flags).
+# --------------------------------------------------------------------------
+macro:
+  provider: synthetic          # <- switch to `historical` when real data exists
+  join_key: [Year, Quarter]
+  variables:
+    - CPI_Combined_Index
+    - CPI_Inflation_Rate
+    - WPI
+    - Repo_Rate
+    - Reverse_Repo_Rate
+    - oil_price
+    - exchange_rate
+  provenance:
+    source_column: macro_source
+    synthetic_flag_column: macro_is_synthetic
+    synthetic_source_label: synthetic_placeholder
+  # Drop-in path for real data when provider == historical. The file must
+  # contain join_key + the variables above (extra columns ignored).
+  historical:
+    path: "data/macro/historical_macro.csv"
+  # Parameters for the synthetic generator (India-like, quarterly).
+  synthetic_params:
+    repo_rate:      {start: 6.50, step_std: 0.10, min: 4.00, max: 8.00, round: 0.05}
+    repo_corridor:  0.65          # Reverse_Repo = Repo - corridor (+ small noise)
+    corridor_noise_std: 0.03
+    cpi_inflation:  {start: 5.00, ar_phi: 0.6, mean: 5.00, noise_std: 0.40, min: 2.00, max: 8.00}
+    cpi_index_start: 172.0        # compounds with quarterly CPI inflation
+    wpi_start: 152.0              # co-moves with CPI (positive) + oil sensitivity
+    wpi_cpi_beta: 0.60            # WPI inflation loading on CPI inflation
+    wpi_oil_beta: 0.05            # WPI inflation loading on oil % change
+    wpi_noise_std: 0.30
+    oil_price:      {start: 80.0, pct_change_std: 0.04, max_abs_pct_change: 0.12, min: 55.0, max: 110.0}
+    exchange_rate:  {start: 83.0, drift: 0.15, oil_beta: 0.03, noise_std: 0.15, max_abs_change: 0.60, min: 80.0, max: 90.0}
+
+# ==========================================================================
+# PHASE 3 — PREPROCESSING, FEATURE ENGINEERING, TARGETS
+# ==========================================================================
+# Single input source of truth for Phase 3.
+phase3:
+  input_dataset: "data/processed/updated_phase2_training_dataset.csv"
+
+paths_phase3:
+  reports_dir: "reports/phase3"
+  processed_dataset: "data/processed/processed_training_dataset.csv"
+  pipeline_file: "artifacts/preprocessing_pipeline.joblib"
+  feature_metadata: "artifacts/feature_metadata.json"
+
+# --------------------------------------------------------------------------
+# Panel / leakage boundaries. Each (source, Company) is ONE contiguous
+# 8-quarter series; all lags/rolling/growth/targets are computed strictly
+# within these groups, ordered by time_index. This preserves company
+# boundaries and quarterly ordering.
+# --------------------------------------------------------------------------
+features:
+  entity_group: [source, Company]
+  order_by: time_index
+
+  # Raw current-quarter (time t) values are valid predictors (known at t).
+  financial_vars:
+    [Sales, Expenses, Operating Profit, Net Profit, Total Assets, Equity,
+     Borrowings, Total Liabilities, CFO, CFI, CFF, Net Cash Flow]
+  macro_vars:
+    [CPI_Combined_Index, CPI_Inflation_Rate, WPI, Repo_Rate,
+     Reverse_Repo_Rate, oil_price, exchange_rate]
+
+  # Lag features (history only).
+  lag_vars:
+    [Sales, Expenses, Operating Profit, Net Profit, Total Assets, Equity,
+     Borrowings, Total Liabilities, CFO, CFI, CFF, Net Cash Flow]
+  lags: [1, 2, 4]
+  macro_lags: [1, 4]
+
+  # Rolling statistics — computed on shift(1) so they use PAST observations
+  # only (never the current quarter).
+  rolling:
+    vars: [Sales, Operating Profit, Net Profit, Borrowings, Total Assets, CFO]
+    windows: [4]
+    stats: [mean, median, std, growth]
+    min_periods: 2
+
+  # Historical growth features. qoq/yoy use current t vs past (known at t);
+  # lagged growth uses only past quarters.
+  growth:
+    vars: [Sales, Operating Profit, Net Profit, Borrowings, Total Assets, CFO]
+    qoq: true
+    yoy: true
+    include_lagged_growth: true
+
+  seasonal:
+    quarter_onehot: true
+    fiscal_year_end_flag: true     # is_Q4
+
+  # Explicit, economically-justified interactions only (no arbitrary crosses).
+  interactions:
+    - {name: repo_x_borrowings,    a: Repo_Rate,           b: Borrowings}
+    - {name: repo_x_total_assets,  a: Repo_Rate,           b: Total Assets}
+    - {name: oil_x_sales,          a: oil_price,           b: Sales}
+    - {name: cpi_infl_x_sales,     a: CPI_Inflation_Rate,  b: Sales}
+    - {name: fx_x_sales,           a: exchange_rate,       b: Sales}
+
+  categorical_features: [Sector]
+  # Columns never used as predictors (identity/bookkeeping/provenance).
+  identifier_columns:
+    [Company, Ticker, Period, Year, Quarter, quarter_num, time_index,
+     source, macro_source, is_synthetic_company, macro_is_synthetic]
+
+# --------------------------------------------------------------------------
+# Targets — six independent one-quarter-ahead (t+1) regression targets.
+# Growth % is NEVER a training target; it is derived post-prediction.
+# --------------------------------------------------------------------------
+targets:
+  horizon: 1
+  prefix: "target_"
+  variables: [Sales, Operating Profit, Net Profit, Borrowings, Total Assets, CFO]
+
+# --------------------------------------------------------------------------
+# Preprocessing policy. Scaling is NOT global. Tree models receive unscaled
+# features; only linear-family models get scaling + imputation.
+# --------------------------------------------------------------------------
+preprocessing:
+  scaling: {method: standard}
+  imputation: {numeric_strategy: median}
+  model_families:
+    tree:        {scale: false, impute: false}  # HGB/XGB/LGBM/CatBoost handle NaN natively
+    tree_impute: {scale: false, impute: true}   # sklearn DT/RF/ExtraTrees: unscaled but NaN-free
+    linear:      {scale: true,  impute: true}   # LinearRegression/Ridge/Lasso/ElasticNet require it
+
+# --------------------------------------------------------------------------
+# Feature selection policy. Only demonstrably harmful features are removed:
+# constant (zero-variance) and exact-duplicate columns. High correlation /
+# high VIF are REPORTED but retained (they carry accounting meaning; trees are
+# robust and linear models use regularization).
+# --------------------------------------------------------------------------
+feature_selection:
+  drop_constant: true
+  drop_exact_duplicates: true
+  auto_drop_high_correlation: false
+  high_corr_threshold: 0.95
+  vif_report_threshold: 10.0
+
+# ==========================================================================
+# PHASE 4 — BASELINE MODEL DEVELOPMENT & BENCHMARKING (no tuning)
+# ==========================================================================
+phase4:
+  input_dataset: "data/processed/processed_training_dataset.csv"
+  feature_metadata: "artifacts/feature_metadata.json"
+  pipeline_file: "artifacts/preprocessing_pipeline.joblib"
+  output_root: "reports/phase4"
+  models_dir: "saved_baseline_models"
+  random_seed: 42
+
+# Walk-forward (expanding-window) validation over quarters. Each fold trains on
+# all entity rows with feature time_index <= boundary and validates on the next
+# quarter's rows. Never shuffles; company boundaries + ordering preserved.
+validation:
+  scheme: walk_forward
+  n_folds: 3
+  min_train_quarters: 4
+
+# Leakage safety net: if a model's mean validation R^2 exceeds this, run extra
+# leakage diagnostics before accepting (compare to naive baseline, feature-target
+# correlation scan, target-permutation test).
+leakage_diagnostics:
+  r2_trigger: 0.98
+  feature_target_corr_flag: 0.999
+  # A permutation test indicates leakage only if the model retains MEANINGFUL
+  # skill on shuffled targets. High-variance baggers (RandomForest/ExtraTrees/
+  # CatBoost) produce slightly non-constant predictions even on shuffled labels
+  # (perm R^2 ~0.1), so a very tight tolerance mislabels persistence as leakage.
+  # 0.20 is still an enormous collapse from the real R^2 (~0.95-0.998).
+  permutation_r2_tolerance: 0.20
+
+# Prediction intervals (stored separately; never used to rank models).
+uncertainty:
+  interval: 0.90
+  method: oof_residual_quantile
+
+# --------------------------------------------------------------------------
+# Model registry. `pre` selects which Phase-3 preprocessor family the model
+# receives (linear=scaled, tree=NaN-native unscaled, tree_impute=unscaled+imputed).
+# Parameters are library BASELINE defaults — no tuning in this phase.
+# --------------------------------------------------------------------------
+models:
+  linear:
+    linear_regression: {estimator: LinearRegression, pre: linear, params: {}}
+    ridge:            {estimator: Ridge, pre: linear, params: {alpha: 1.0}}
+    lasso:            {estimator: Lasso, pre: linear, params: {alpha: 0.01, max_iter: 10000}}
+    elastic_net:      {estimator: ElasticNet, pre: linear, params: {alpha: 0.01, l1_ratio: 0.5, max_iter: 10000}}
+  tree:
+    decision_tree:    {estimator: DecisionTreeRegressor, pre: tree_impute, params: {}}
+    random_forest:    {estimator: RandomForestRegressor, pre: tree_impute, params: {n_estimators: 200, n_jobs: -1}}
+    extra_trees:      {estimator: ExtraTreesRegressor, pre: tree_impute, params: {n_estimators: 200, n_jobs: -1}}
+    hist_gradient_boosting: {estimator: HistGradientBoostingRegressor, pre: tree, params: {}}
+  boosting:
+    xgboost:          {estimator: XGBRegressor, pre: tree, params: {n_estimators: 300, tree_method: hist, n_jobs: -1}}
+    lightgbm:         {estimator: LGBMRegressor, pre: tree, params: {n_estimators: 300, n_jobs: -1, verbose: -1}}
+    catboost:         {estimator: CatBoostRegressor, pre: tree, params: {iterations: 300, verbose: 0}}
+  benchmark:
+    multioutput_random_forest: {estimator: RandomForestRegressor, pre: tree_impute, params: {n_estimators: 200, n_jobs: -1}}
+
+# Top-N candidate models per target promoted to Phase 5 (selection only, no tuning here).
+leaderboard:
+  top_n: 3
+  rank_metrics: [rmse, r2, mae, stability]
+
+# ==========================================================================
+# PHASE 5 — HYPERPARAMETER OPTIMIZATION (Optuna)
+# ==========================================================================
+# Only each target's Phase-4 top-N candidates are tuned. Same leakage-safe
+# walk-forward folds as Phase 4. Optimize RMSE first, MAE as tie-break. Target
+# formulation, features, and synthetic data are NOT changed in this phase.
+phase5:
+  input_dataset: "data/processed/processed_training_dataset.csv"
+  feature_metadata: "artifacts/feature_metadata.json"
+  phase4_leaderboard: "reports/phase4/leaderboard.csv"
+  phase4_results: "reports/phase4/baseline_results.csv"
+  output_root: "reports/phase5"
+  models_dir: "saved_tuned_models"
+  random_seed: 42
+  # Candidate models = each target's Phase-4 top-N (excludes benchmark).
+  candidates_top_n: 3
+  # Optuna trial budget per model family.
+  n_trials:
+    linear: 30
+    tree: 20
+    boosting: 30
+  # Promote a tuned model only if it beats its Phase-4 baseline pooled-OOF RMSE
+  # by at least this fraction (genuine improvement, not noise).
+  promotion:
+    min_rmse_improvement_frac: 0.001
+  # Early stopping for boosters (XGB/LightGBM/CatBoost). Implemented but only
+  # engaged if a booster is among a target's candidates (none are, per Phase 4).
+  early_stopping:
+    enabled: true
+    rounds: 50
+    holdout_last_quarters: 1

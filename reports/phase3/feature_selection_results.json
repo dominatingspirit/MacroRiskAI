@@ -1,0 +1,2213 @@
+{
+  "feature_selection": {
+    "n_features_in": 121,
+    "constant_features": [],
+    "exact_duplicate_groups": [
+      [
+        "Quarter_Q4",
+        "is_Q4"
+      ]
+    ],
+    "high_correlation_pairs": [
+      {
+        "a": "Sales",
+        "b": "fx_x_sales",
+        "abs_r": 1.0
+      },
+      {
+        "a": "WPI",
+        "b": "WPI_lag4",
+        "abs_r": 1.0
+      },
+      {
+        "a": "Quarter_Q4",
+        "b": "is_Q4",
+        "abs_r": 1.0
+      },
+      {
+        "a": "Repo_Rate_lag1",
+        "b": "Repo_Rate_lag4",
+        "abs_r": 1.0
+      },
+      {
+        "a": "Sales_roll4_mean",
+        "b": "Sales_roll4_median",
+        "abs_r": 1.0
+      },
+      {
+        "a": "WPI",
+        "b": "CPI_Combined_Index_lag4",
+        "abs_r": 0.9999
+      },
+      {
+        "a": "CPI_Combined_Index_lag4",
+        "b": "WPI_lag1",
+        "abs_r": 0.9999
+      },
+      {
+        "a": "CPI_Combined_Index_lag4",
+        "b": "WPI_lag4",
+        "abs_r": 0.9999
+      },
+      {
+        "a": "CPI_Inflation_Rate_lag1",
+        "b": "oil_price_lag4",
+        "abs_r": 0.9999
+      },
+      {
+        "a": "Total Assets",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9998
+      },
+      {
+        "a": "Borrowings",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9998
+      },
+      {
+        "a": "CPI_Combined_Index",
+        "b": "CPI_Combined_Index_lag1",
+        "abs_r": 0.9998
+      },
+      {
+        "a": "CPI_Combined_Index",
+        "b": "CPI_Combined_Index_lag4",
+        "abs_r": 0.9998
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "Sales_roll4_median",
+        "abs_r": 0.9998
+      },
+      {
+        "a": "CPI_Combined_Index_lag1",
+        "b": "CPI_Combined_Index_lag4",
+        "abs_r": 0.9998
+      },
+      {
+        "a": "Total Assets_roll4_mean",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9998
+      },
+      {
+        "a": "Sales",
+        "b": "oil_x_sales",
+        "abs_r": 0.9997
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "Sales_roll4_mean",
+        "abs_r": 0.9997
+      },
+      {
+        "a": "oil_x_sales",
+        "b": "fx_x_sales",
+        "abs_r": 0.9997
+      },
+      {
+        "a": "Operating Profit_roll4_mean",
+        "b": "Operating Profit_roll4_median",
+        "abs_r": 0.9996
+      },
+      {
+        "a": "Borrowings_roll4_mean",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9996
+      },
+      {
+        "a": "WPI_lag1",
+        "b": "WPI_lag4",
+        "abs_r": 0.9995
+      },
+      {
+        "a": "Quarter_Q1",
+        "b": "exchange_rate_lag4",
+        "abs_r": 0.9994
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "Sales_lag2",
+        "abs_r": 0.9994
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "Sales_roll4_mean",
+        "abs_r": 0.9994
+      },
+      {
+        "a": "CFO_roll4_mean",
+        "b": "CFO_roll4_median",
+        "abs_r": 0.9994
+      },
+      {
+        "a": "Sales",
+        "b": "Sales_lag1",
+        "abs_r": 0.9993
+      },
+      {
+        "a": "CPI_Combined_Index",
+        "b": "WPI_lag4",
+        "abs_r": 0.9993
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "Sales_roll4_median",
+        "abs_r": 0.9993
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "fx_x_sales",
+        "abs_r": 0.9993
+      },
+      {
+        "a": "Sales_lag4",
+        "b": "Sales_roll4_mean",
+        "abs_r": 0.9993
+      },
+      {
+        "a": "CPI_Combined_Index_lag1",
+        "b": "WPI_lag4",
+        "abs_r": 0.9993
+      },
+      {
+        "a": "Expenses_lag1",
+        "b": "Expenses_lag2",
+        "abs_r": 0.9992
+      },
+      {
+        "a": "Expenses",
+        "b": "Expenses_lag1",
+        "abs_r": 0.9991
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "oil_x_sales",
+        "abs_r": 0.9991
+      },
+      {
+        "a": "Sales_lag4",
+        "b": "Sales_roll4_median",
+        "abs_r": 0.9991
+      },
+      {
+        "a": "Net Profit_roll4_mean",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.9991
+      },
+      {
+        "a": "Repo_Rate_lag1",
+        "b": "Reverse_Repo_Rate_lag4",
+        "abs_r": 0.999
+      },
+      {
+        "a": "Repo_Rate_lag4",
+        "b": "Reverse_Repo_Rate_lag4",
+        "abs_r": 0.999
+      },
+      {
+        "a": "CPI_Combined_Index",
+        "b": "WPI",
+        "abs_r": 0.9989
+      },
+      {
+        "a": "WPI",
+        "b": "CPI_Combined_Index_lag1",
+        "abs_r": 0.9989
+      },
+      {
+        "a": "Sales",
+        "b": "Sales_roll4_mean",
+        "abs_r": 0.9986
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9986
+      },
+      {
+        "a": "Sales_roll4_mean",
+        "b": "fx_x_sales",
+        "abs_r": 0.9986
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9985
+      },
+      {
+        "a": "Sales_roll4_mean",
+        "b": "oil_x_sales",
+        "abs_r": 0.9985
+      },
+      {
+        "a": "Sales",
+        "b": "Sales_roll4_median",
+        "abs_r": 0.9984
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "Sales_lag4",
+        "abs_r": 0.9984
+      },
+      {
+        "a": "Sales_roll4_median",
+        "b": "oil_x_sales",
+        "abs_r": 0.9984
+      },
+      {
+        "a": "Sales_roll4_median",
+        "b": "fx_x_sales",
+        "abs_r": 0.9984
+      },
+      {
+        "a": "cpi_infl_x_sales",
+        "b": "fx_x_sales",
+        "abs_r": 0.9984
+      },
+      {
+        "a": "Sales",
+        "b": "Sales_lag2",
+        "abs_r": 0.9983
+      },
+      {
+        "a": "Sales",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9983
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "fx_x_sales",
+        "abs_r": 0.9983
+      },
+      {
+        "a": "exchange_rate",
+        "b": "CPI_Combined_Index_lag4",
+        "abs_r": 0.9982
+      },
+      {
+        "a": "Expenses_lag2",
+        "b": "Expenses_lag4",
+        "abs_r": 0.9982
+      },
+      {
+        "a": "CPI_Combined_Index_lag1",
+        "b": "WPI_lag1",
+        "abs_r": 0.9982
+      },
+      {
+        "a": "Reverse_Repo_Rate_lag1",
+        "b": "Reverse_Repo_Rate_lag4",
+        "abs_r": 0.9982
+      },
+      {
+        "a": "WPI",
+        "b": "WPI_lag1",
+        "abs_r": 0.9981
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "oil_x_sales",
+        "abs_r": 0.9981
+      },
+      {
+        "a": "Expenses",
+        "b": "Expenses_lag2",
+        "abs_r": 0.998
+      },
+      {
+        "a": "CPI_Combined_Index",
+        "b": "WPI_lag1",
+        "abs_r": 0.9979
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9977
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "Sales_lag4",
+        "abs_r": 0.9975
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9975
+      },
+      {
+        "a": "WPI_lag4",
+        "b": "exchange_rate_lag1",
+        "abs_r": 0.9974
+      },
+      {
+        "a": "oil_x_sales",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9974
+      },
+      {
+        "a": "Expenses_lag1",
+        "b": "Expenses_lag4",
+        "abs_r": 0.9972
+      },
+      {
+        "a": "CPI_Inflation_Rate",
+        "b": "WPI_lag4",
+        "abs_r": 0.9971
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9971
+      },
+      {
+        "a": "exchange_rate",
+        "b": "WPI_lag4",
+        "abs_r": 0.997
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.997
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.997
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9969
+      },
+      {
+        "a": "Sales_roll4_mean",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9969
+      },
+      {
+        "a": "Sales_lag4",
+        "b": "oil_x_sales",
+        "abs_r": 0.9968
+      },
+      {
+        "a": "Sales_lag4",
+        "b": "fx_x_sales",
+        "abs_r": 0.9968
+      },
+      {
+        "a": "Sales",
+        "b": "Sales_lag4",
+        "abs_r": 0.9967
+      },
+      {
+        "a": "Sales_roll4_median",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9967
+      },
+      {
+        "a": "Sales_lag4",
+        "b": "Expenses_lag4",
+        "abs_r": 0.9966
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9966
+      },
+      {
+        "a": "Expenses",
+        "b": "Expenses_lag4",
+        "abs_r": 0.9964
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "Expenses_lag2",
+        "abs_r": 0.9964
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "Expenses_lag1",
+        "abs_r": 0.9963
+      },
+      {
+        "a": "Sales_lag4",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9963
+      },
+      {
+        "a": "Expenses_lag2",
+        "b": "Sales_roll4_mean",
+        "abs_r": 0.9963
+      },
+      {
+        "a": "Expenses_lag2",
+        "b": "Sales_roll4_median",
+        "abs_r": 0.9963
+      },
+      {
+        "a": "Sales",
+        "b": "Expenses",
+        "abs_r": 0.9962
+      },
+      {
+        "a": "Expenses",
+        "b": "fx_x_sales",
+        "abs_r": 0.9962
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9962
+      },
+      {
+        "a": "CPI_Combined_Index_lag4",
+        "b": "exchange_rate_lag1",
+        "abs_r": 0.996
+      },
+      {
+        "a": "Expenses",
+        "b": "oil_x_sales",
+        "abs_r": 0.9959
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "Expenses_lag2",
+        "abs_r": 0.9958
+      },
+      {
+        "a": "Expenses_lag1",
+        "b": "Sales_roll4_mean",
+        "abs_r": 0.9958
+      },
+      {
+        "a": "Expenses_lag4",
+        "b": "Sales_roll4_mean",
+        "abs_r": 0.9958
+      },
+      {
+        "a": "Operating Profit_lag2",
+        "b": "Operating Profit_roll4_median",
+        "abs_r": 0.9958
+      },
+      {
+        "a": "Sales",
+        "b": "Expenses_lag1",
+        "abs_r": 0.9957
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "Expenses_lag1",
+        "abs_r": 0.9957
+      },
+      {
+        "a": "Expenses_lag1",
+        "b": "Sales_roll4_median",
+        "abs_r": 0.9957
+      },
+      {
+        "a": "Expenses_lag1",
+        "b": "fx_x_sales",
+        "abs_r": 0.9957
+      },
+      {
+        "a": "CPI_Inflation_Rate",
+        "b": "CPI_Combined_Index_lag4",
+        "abs_r": 0.9956
+      },
+      {
+        "a": "Expenses_lag4",
+        "b": "Sales_roll4_median",
+        "abs_r": 0.9956
+      },
+      {
+        "a": "Operating Profit_lag2",
+        "b": "Operating Profit_roll4_mean",
+        "abs_r": 0.9956
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Total Assets_lag2",
+        "abs_r": 0.9956
+      },
+      {
+        "a": "Expenses",
+        "b": "Sales_lag1",
+        "abs_r": 0.9955
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Assets_lag1",
+        "abs_r": 0.9955
+      },
+      {
+        "a": "Expenses_lag1",
+        "b": "oil_x_sales",
+        "abs_r": 0.9954
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9952
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9952
+      },
+      {
+        "a": "CFO_lag2",
+        "b": "CFO_roll4_median",
+        "abs_r": 0.9952
+      },
+      {
+        "a": "Sales_lag4",
+        "b": "Expenses_lag2",
+        "abs_r": 0.995
+      },
+      {
+        "a": "Expenses",
+        "b": "Sales_roll4_mean",
+        "abs_r": 0.9949
+      },
+      {
+        "a": "CFO_lag2",
+        "b": "CFO_roll4_mean",
+        "abs_r": 0.9949
+      },
+      {
+        "a": "Sales",
+        "b": "Expenses_lag2",
+        "abs_r": 0.9948
+      },
+      {
+        "a": "Sales_lag2",
+        "b": "Expenses_lag4",
+        "abs_r": 0.9948
+      },
+      {
+        "a": "Expenses_lag2",
+        "b": "fx_x_sales",
+        "abs_r": 0.9948
+      },
+      {
+        "a": "Expenses",
+        "b": "Sales_roll4_median",
+        "abs_r": 0.9947
+      },
+      {
+        "a": "Repo_Rate",
+        "b": "CPI_Combined_Index_lag4",
+        "abs_r": 0.9947
+      },
+      {
+        "a": "Expenses_lag2",
+        "b": "oil_x_sales",
+        "abs_r": 0.9946
+      },
+      {
+        "a": "Expenses",
+        "b": "Sales_lag2",
+        "abs_r": 0.9945
+      },
+      {
+        "a": "Expenses",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9945
+      },
+      {
+        "a": "Repo_Rate_lag4",
+        "b": "Reverse_Repo_Rate_lag1",
+        "abs_r": 0.9945
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9944
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9941
+      },
+      {
+        "a": "Sales_lag1",
+        "b": "Expenses_lag4",
+        "abs_r": 0.994
+      },
+      {
+        "a": "Sales_lag4",
+        "b": "Expenses_lag1",
+        "abs_r": 0.9939
+      },
+      {
+        "a": "Expenses_lag1",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9939
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9936
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.9936
+      },
+      {
+        "a": "Total Assets_roll4_mean",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9936
+      },
+      {
+        "a": "Expenses_lag4",
+        "b": "fx_x_sales",
+        "abs_r": 0.9935
+      },
+      {
+        "a": "Total Liabilities_lag1",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.9935
+      },
+      {
+        "a": "Sales",
+        "b": "Expenses_lag4",
+        "abs_r": 0.9934
+      },
+      {
+        "a": "Expenses_lag2",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.9934
+      },
+      {
+        "a": "Expenses_lag4",
+        "b": "oil_x_sales",
+        "abs_r": 0.9934
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9934
+      },
+      {
+        "a": "Expenses",
+        "b": "Sales_lag4",
+        "abs_r": 0.993
+      },
+      {
+        "a": "Expenses_lag4",
+        "b": "cpi_infl_x_sales",
+        "abs_r": 0.993
+      },
+      {
+        "a": "Total Assets_roll4_median",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.993
+      },
+      {
+        "a": "Repo_Rate",
+        "b": "WPI_lag4",
+        "abs_r": 0.9928
+      },
+      {
+        "a": "oil_price",
+        "b": "CPI_Combined_Index_lag4",
+        "abs_r": 0.9927
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Operating Profit_roll4_mean",
+        "abs_r": 0.9927
+      },
+      {
+        "a": "Quarter_Q1",
+        "b": "oil_price_lag4",
+        "abs_r": 0.9925
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9925
+      },
+      {
+        "a": "Net Profit_lag2",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.992
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Total Assets_lag4",
+        "abs_r": 0.9919
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Assets_lag2",
+        "abs_r": 0.9918
+      },
+      {
+        "a": "Borrowings",
+        "b": "Borrowings_lag1",
+        "abs_r": 0.9918
+      },
+      {
+        "a": "Net Profit_lag2",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.9917
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Borrowings_lag2",
+        "abs_r": 0.9915
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9915
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Operating Profit_roll4_median",
+        "abs_r": 0.9914
+      },
+      {
+        "a": "CFO_lag1",
+        "b": "CFO_roll4_mean",
+        "abs_r": 0.9914
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9913
+      },
+      {
+        "a": "Operating Profit_lag4",
+        "b": "Operating Profit_roll4_mean",
+        "abs_r": 0.9911
+      },
+      {
+        "a": "oil_price",
+        "b": "WPI_lag4",
+        "abs_r": 0.9904
+      },
+      {
+        "a": "Operating Profit_lag4",
+        "b": "Operating Profit_roll4_median",
+        "abs_r": 0.9904
+      },
+      {
+        "a": "CPI_Inflation_Rate_lag1",
+        "b": "exchange_rate_lag4",
+        "abs_r": 0.9903
+      },
+      {
+        "a": "Equity_lag1",
+        "b": "Equity_lag2",
+        "abs_r": 0.9901
+      },
+      {
+        "a": "CFO_lag1",
+        "b": "CFO_roll4_median",
+        "abs_r": 0.99
+      },
+      {
+        "a": "Equity",
+        "b": "Equity_lag1",
+        "abs_r": 0.9898
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Total Assets_lag4",
+        "abs_r": 0.9898
+      },
+      {
+        "a": "Borrowings",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9893
+      },
+      {
+        "a": "Borrowings_roll4_mean",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9889
+      },
+      {
+        "a": "CFO_lag4",
+        "b": "CFO_roll4_mean",
+        "abs_r": 0.9888
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Assets_lag4",
+        "abs_r": 0.9885
+      },
+      {
+        "a": "Borrowings",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9885
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.9884
+      },
+      {
+        "a": "Borrowings_roll4_median",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.988
+      },
+      {
+        "a": "oil_price_lag4",
+        "b": "exchange_rate_lag4",
+        "abs_r": 0.9877
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9874
+      },
+      {
+        "a": "Total Liabilities_lag2",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9874
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Operating Profit_lag1",
+        "abs_r": 0.9873
+      },
+      {
+        "a": "CFO_lag4",
+        "b": "CFO_roll4_median",
+        "abs_r": 0.9872
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9871
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Operating Profit_lag2",
+        "abs_r": 0.9869
+      },
+      {
+        "a": "Repo_Rate_lag1",
+        "b": "Reverse_Repo_Rate_lag1",
+        "abs_r": 0.9866
+      },
+      {
+        "a": "Quarter_Q2",
+        "b": "CPI_Inflation_Rate_lag4",
+        "abs_r": 0.9862
+      },
+      {
+        "a": "Net Profit_lag1",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.9859
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Equity_lag4",
+        "abs_r": 0.9856
+      },
+      {
+        "a": "Borrowings",
+        "b": "Borrowings_lag2",
+        "abs_r": 0.9855
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9851
+      },
+      {
+        "a": "CFO",
+        "b": "CFO_lag1",
+        "abs_r": 0.985
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.9849
+      },
+      {
+        "a": "Total Liabilities_lag1",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9848
+      },
+      {
+        "a": "CFO_lag1",
+        "b": "CFO_lag2",
+        "abs_r": 0.9847
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.9843
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "Borrowings_lag4",
+        "abs_r": 0.9842
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Liabilities",
+        "abs_r": 0.9839
+      },
+      {
+        "a": "Total Liabilities_lag4",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9839
+      },
+      {
+        "a": "Total Liabilities_lag2",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9838
+      },
+      {
+        "a": "Total Liabilities_lag4",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9837
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9836
+      },
+      {
+        "a": "Total Liabilities_lag2",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9835
+      },
+      {
+        "a": "Net Profit_lag1",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.983
+      },
+      {
+        "a": "Equity_lag2",
+        "b": "Equity_lag4",
+        "abs_r": 0.9829
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9827
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Operating Profit_roll4_mean",
+        "abs_r": 0.9823
+      },
+      {
+        "a": "Reverse_Repo_Rate",
+        "b": "CPI_Combined_Index_lag4",
+        "abs_r": 0.9822
+      },
+      {
+        "a": "Operating Profit_roll4_mean",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.982
+      },
+      {
+        "a": "Net Profit_lag4",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.9819
+      },
+      {
+        "a": "Equity_lag4",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9817
+      },
+      {
+        "a": "Equity",
+        "b": "Equity_lag2",
+        "abs_r": 0.9816
+      },
+      {
+        "a": "Repo_Rate_lag4",
+        "b": "oil_price_lag1",
+        "abs_r": 0.9816
+      },
+      {
+        "a": "Operating Profit_roll4_median",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.9814
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Equity_lag2",
+        "abs_r": 0.9813
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Operating Profit_roll4_median",
+        "abs_r": 0.9811
+      },
+      {
+        "a": "Operating Profit_lag4",
+        "b": "Net Profit_lag4",
+        "abs_r": 0.9811
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.981
+      },
+      {
+        "a": "Equity_lag4",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.981
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.981
+      },
+      {
+        "a": "Net Profit_lag4",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.9809
+      },
+      {
+        "a": "Total Liabilities_lag1",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9809
+      },
+      {
+        "a": "Total Liabilities_lag1",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9806
+      },
+      {
+        "a": "Operating Profit_roll4_mean",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.9805
+      },
+      {
+        "a": "Operating Profit_roll4_median",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.9804
+      },
+      {
+        "a": "Repo_Rate",
+        "b": "Reverse_Repo_Rate",
+        "abs_r": 0.9802
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Borrowings_lag4",
+        "abs_r": 0.9801
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.9799
+      },
+      {
+        "a": "Equity_lag2",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9799
+      },
+      {
+        "a": "Equity_lag2",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9799
+      },
+      {
+        "a": "CFO",
+        "b": "CFO_roll4_mean",
+        "abs_r": 0.9798
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Equity_lag1",
+        "abs_r": 0.9795
+      },
+      {
+        "a": "Total Liabilities_lag1",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9794
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Total Assets_lag1",
+        "abs_r": 0.9793
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.9793
+      },
+      {
+        "a": "Operating Profit_lag2",
+        "b": "Operating Profit_lag4",
+        "abs_r": 0.9792
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.9791
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9791
+      },
+      {
+        "a": "Reverse_Repo_Rate",
+        "b": "WPI_lag4",
+        "abs_r": 0.9788
+      },
+      {
+        "a": "Total Liabilities_lag2",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9786
+      },
+      {
+        "a": "Total Assets",
+        "b": "Equity",
+        "abs_r": 0.9785
+      },
+      {
+        "a": "Equity",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9785
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.9785
+      },
+      {
+        "a": "CFO",
+        "b": "CFO_roll4_median",
+        "abs_r": 0.9784
+      },
+      {
+        "a": "Total Liabilities_lag2",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9784
+      },
+      {
+        "a": "Operating Profit_lag2",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.9783
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9783
+      },
+      {
+        "a": "Borrowings",
+        "b": "Total Liabilities",
+        "abs_r": 0.9778
+      },
+      {
+        "a": "Total Liabilities_lag1",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9778
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9777
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.9776
+      },
+      {
+        "a": "Total Assets",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9774
+      },
+      {
+        "a": "Operating Profit_lag2",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.9774
+      },
+      {
+        "a": "Equity_lag1",
+        "b": "Equity_lag4",
+        "abs_r": 0.9774
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Equity_lag4",
+        "abs_r": 0.9772
+      },
+      {
+        "a": "Total Liabilities_lag2",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9771
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Operating Profit_lag2",
+        "abs_r": 0.9769
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9769
+      },
+      {
+        "a": "Total Liabilities_lag1",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9768
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9766
+      },
+      {
+        "a": "CFF",
+        "b": "CFF_lag1",
+        "abs_r": 0.9764
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Equity_lag2",
+        "abs_r": 0.9764
+      },
+      {
+        "a": "Total Liabilities_lag4",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9762
+      },
+      {
+        "a": "Borrowings",
+        "b": "Borrowings_lag4",
+        "abs_r": 0.9758
+      },
+      {
+        "a": "Net Profit",
+        "b": "Net Profit_lag1",
+        "abs_r": 0.9757
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.9756
+      },
+      {
+        "a": "Equity_lag1",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9756
+      },
+      {
+        "a": "Equity",
+        "b": "Equity_lag4",
+        "abs_r": 0.9755
+      },
+      {
+        "a": "CFF_lag1",
+        "b": "CFF_lag2",
+        "abs_r": 0.9753
+      },
+      {
+        "a": "CFI",
+        "b": "CFI_lag1",
+        "abs_r": 0.9751
+      },
+      {
+        "a": "Net Profit_lag1",
+        "b": "Net Profit_lag2",
+        "abs_r": 0.975
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.975
+      },
+      {
+        "a": "Equity_lag1",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.975
+      },
+      {
+        "a": "Total Assets",
+        "b": "Equity_lag1",
+        "abs_r": 0.9749
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9749
+      },
+      {
+        "a": "CFO_lag4",
+        "b": "CFI_lag4",
+        "abs_r": 0.9749
+      },
+      {
+        "a": "Total Liabilities_lag4",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9748
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Total Assets_lag2",
+        "abs_r": 0.9747
+      },
+      {
+        "a": "Equity_lag1",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9747
+      },
+      {
+        "a": "Operating Profit_lag2",
+        "b": "Net Profit_lag2",
+        "abs_r": 0.9746
+      },
+      {
+        "a": "CFI_lag1",
+        "b": "CFI_lag2",
+        "abs_r": 0.9746
+      },
+      {
+        "a": "Net Profit_lag4",
+        "b": "Operating Profit_roll4_mean",
+        "abs_r": 0.9744
+      },
+      {
+        "a": "CFO_lag2",
+        "b": "CFO_lag4",
+        "abs_r": 0.9739
+      },
+      {
+        "a": "Net Profit_lag4",
+        "b": "Operating Profit_roll4_median",
+        "abs_r": 0.9738
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Equity_lag1",
+        "abs_r": 0.9737
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.9737
+      },
+      {
+        "a": "Total Liabilities_lag4",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9737
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9736
+      },
+      {
+        "a": "CFO",
+        "b": "CFO_lag2",
+        "abs_r": 0.9735
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Equity_lag4",
+        "abs_r": 0.9733
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.9731
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9728
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Borrowings_lag1",
+        "abs_r": 0.9727
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Net Profit_lag1",
+        "abs_r": 0.9722
+      },
+      {
+        "a": "Reverse_Repo_Rate_lag4",
+        "b": "oil_price_lag1",
+        "abs_r": 0.9721
+      },
+      {
+        "a": "Equity",
+        "b": "Total Assets_lag1",
+        "abs_r": 0.972
+      },
+      {
+        "a": "Total Assets",
+        "b": "Equity_lag2",
+        "abs_r": 0.9719
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.9717
+      },
+      {
+        "a": "Borrowings",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.9716
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.9716
+      },
+      {
+        "a": "Total Assets",
+        "b": "Equity_lag4",
+        "abs_r": 0.9715
+      },
+      {
+        "a": "Equity_lag2",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9715
+      },
+      {
+        "a": "Total Liabilities_lag1",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9713
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Operating Profit_lag4",
+        "abs_r": 0.971
+      },
+      {
+        "a": "CFO_lag2",
+        "b": "CFI_lag2",
+        "abs_r": 0.9707
+      },
+      {
+        "a": "Equity_lag4",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9706
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Net Profit",
+        "abs_r": 0.9705
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Total Assets_lag4",
+        "abs_r": 0.9699
+      },
+      {
+        "a": "Net Profit_lag2",
+        "b": "Operating Profit_roll4_mean",
+        "abs_r": 0.9699
+      },
+      {
+        "a": "Net Profit_lag2",
+        "b": "Operating Profit_roll4_median",
+        "abs_r": 0.9698
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.9696
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Equity_lag2",
+        "abs_r": 0.9695
+      },
+      {
+        "a": "CFO_lag1",
+        "b": "CFI_lag1",
+        "abs_r": 0.9694
+      },
+      {
+        "a": "Equity",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9693
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Borrowings_lag2",
+        "abs_r": 0.9689
+      },
+      {
+        "a": "Equity",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9686
+      },
+      {
+        "a": "CFO",
+        "b": "CFI",
+        "abs_r": 0.9682
+      },
+      {
+        "a": "Operating Profit_lag4",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.9682
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "Total Liabilities_lag1",
+        "abs_r": 0.968
+      },
+      {
+        "a": "Net Profit",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.9671
+      },
+      {
+        "a": "Equity",
+        "b": "Total Assets_lag2",
+        "abs_r": 0.9669
+      },
+      {
+        "a": "Borrowings",
+        "b": "Total Liabilities_lag2",
+        "abs_r": 0.9665
+      },
+      {
+        "a": "Operating Profit_lag4",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.9665
+      },
+      {
+        "a": "Total Liabilities",
+        "b": "Borrowings_lag4",
+        "abs_r": 0.9663
+      },
+      {
+        "a": "Total Liabilities_lag2",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9662
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Net Profit_roll4_mean",
+        "abs_r": 0.966
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9658
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Equity_lag1",
+        "abs_r": 0.9655
+      },
+      {
+        "a": "CFO_lag1",
+        "b": "CFO_lag4",
+        "abs_r": 0.9655
+      },
+      {
+        "a": "CFI_lag4",
+        "b": "CFO_roll4_mean",
+        "abs_r": 0.9653
+      },
+      {
+        "a": "Net Profit",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.965
+      },
+      {
+        "a": "CFI_lag2",
+        "b": "CFO_roll4_median",
+        "abs_r": 0.9649
+      },
+      {
+        "a": "CFI_lag2",
+        "b": "CFO_roll4_mean",
+        "abs_r": 0.9648
+      },
+      {
+        "a": "Equity",
+        "b": "Total Assets_lag4",
+        "abs_r": 0.9642
+      },
+      {
+        "a": "Operating Profit_lag2",
+        "b": "Net Profit_lag4",
+        "abs_r": 0.9642
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Net Profit_roll4_median",
+        "abs_r": 0.9637
+      },
+      {
+        "a": "CFI_lag4",
+        "b": "CFO_roll4_median",
+        "abs_r": 0.9635
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Operating Profit_lag4",
+        "abs_r": 0.9625
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Net Profit_lag2",
+        "abs_r": 0.962
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9617
+      },
+      {
+        "a": "Net Profit_lag1",
+        "b": "Operating Profit_roll4_mean",
+        "abs_r": 0.961
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Net Profit_lag1",
+        "abs_r": 0.9605
+      },
+      {
+        "a": "CFF",
+        "b": "CFF_lag2",
+        "abs_r": 0.9605
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Borrowings_lag4",
+        "abs_r": 0.9604
+      },
+      {
+        "a": "Net Profit_lag2",
+        "b": "Net Profit_lag4",
+        "abs_r": 0.9596
+      },
+      {
+        "a": "Borrowings_roll4_mean",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9596
+      },
+      {
+        "a": "Borrowings_roll4_mean",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9595
+      },
+      {
+        "a": "Net Profit_lag1",
+        "b": "Operating Profit_roll4_median",
+        "abs_r": 0.9594
+      },
+      {
+        "a": "CFF_lag2",
+        "b": "CFF_lag4",
+        "abs_r": 0.959
+      },
+      {
+        "a": "Borrowings_roll4_median",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9589
+      },
+      {
+        "a": "Borrowings_roll4_median",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9586
+      },
+      {
+        "a": "Borrowings",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9577
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9575
+      },
+      {
+        "a": "CFO_lag1",
+        "b": "CFI_lag2",
+        "abs_r": 0.9575
+      },
+      {
+        "a": "CFO",
+        "b": "CFO_lag4",
+        "abs_r": 0.9574
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9574
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9572
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9571
+      },
+      {
+        "a": "CFO_lag4",
+        "b": "CFF_lag4",
+        "abs_r": 0.957
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9568
+      },
+      {
+        "a": "Total Liabilities_lag4",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9567
+      },
+      {
+        "a": "CFI",
+        "b": "CFI_lag2",
+        "abs_r": 0.9563
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9563
+      },
+      {
+        "a": "Net Profit",
+        "b": "Net Profit_lag2",
+        "abs_r": 0.9561
+      },
+      {
+        "a": "CFO",
+        "b": "CFI_lag1",
+        "abs_r": 0.9561
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Borrowings_lag2",
+        "abs_r": 0.9559
+      },
+      {
+        "a": "Operating Profit_lag2",
+        "b": "Net Profit_lag1",
+        "abs_r": 0.9558
+      },
+      {
+        "a": "CFI_lag2",
+        "b": "CFI_lag4",
+        "abs_r": 0.9556
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9555
+      },
+      {
+        "a": "CFI_lag1",
+        "b": "CFO_roll4_mean",
+        "abs_r": 0.9552
+      },
+      {
+        "a": "Borrowings_lag2",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.9551
+      },
+      {
+        "a": "Total Assets",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.955
+      },
+      {
+        "a": "Operating Profit_lag1",
+        "b": "Net Profit_lag4",
+        "abs_r": 0.955
+      },
+      {
+        "a": "Net Profit",
+        "b": "Operating Profit_lag1",
+        "abs_r": 0.9548
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Borrowings_lag1",
+        "abs_r": 0.9548
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Borrowings_roll4_mean",
+        "abs_r": 0.9544
+      },
+      {
+        "a": "Borrowings_roll4_mean",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9544
+      },
+      {
+        "a": "Total Assets",
+        "b": "Borrowings",
+        "abs_r": 0.9541
+      },
+      {
+        "a": "Total Assets",
+        "b": "repo_x_borrowings",
+        "abs_r": 0.9541
+      },
+      {
+        "a": "repo_x_borrowings",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9541
+      },
+      {
+        "a": "Total Assets",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.9539
+      },
+      {
+        "a": "Borrowings",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9538
+      },
+      {
+        "a": "CFI_lag1",
+        "b": "CFO_roll4_median",
+        "abs_r": 0.9537
+      },
+      {
+        "a": "Operating Profit",
+        "b": "Net Profit_lag2",
+        "abs_r": 0.9534
+      },
+      {
+        "a": "Borrowings_roll4_median",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9532
+      },
+      {
+        "a": "Total Assets_lag4",
+        "b": "Borrowings_roll4_median",
+        "abs_r": 0.953
+      },
+      {
+        "a": "Total Assets",
+        "b": "Borrowings_lag4",
+        "abs_r": 0.9528
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Borrowings_lag2",
+        "abs_r": 0.9528
+      },
+      {
+        "a": "Total Assets_lag1",
+        "b": "Borrowings_lag4",
+        "abs_r": 0.9526
+      },
+      {
+        "a": "Equity_lag4",
+        "b": "Total Liabilities_lag4",
+        "abs_r": 0.9524
+      },
+      {
+        "a": "CFO_lag2",
+        "b": "CFF_lag2",
+        "abs_r": 0.9524
+      },
+      {
+        "a": "Total Assets_lag2",
+        "b": "Borrowings_lag4",
+        "abs_r": 0.9518
+      },
+      {
+        "a": "Borrowings_lag4",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9517
+      },
+      {
+        "a": "CFO_lag1",
+        "b": "CFF_lag1",
+        "abs_r": 0.9515
+      },
+      {
+        "a": "CFF_lag1",
+        "b": "CFF_lag4",
+        "abs_r": 0.9511
+      },
+      {
+        "a": "Total Assets",
+        "b": "Borrowings_lag1",
+        "abs_r": 0.951
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Total Assets_roll4_mean",
+        "abs_r": 0.951
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "Total Assets_roll4_median",
+        "abs_r": 0.9509
+      },
+      {
+        "a": "CFO",
+        "b": "CFF",
+        "abs_r": 0.9508
+      },
+      {
+        "a": "Borrowings_lag1",
+        "b": "repo_x_total_assets",
+        "abs_r": 0.9505
+      },
+      {
+        "a": "CFO_lag2",
+        "b": "CFI_lag4",
+        "abs_r": 0.9505
+      }
+    ],
+    "vif": {
+      "threshold": 10.0,
+      "n_features_above_threshold": 98,
+      "severe_features": {
+        "Sales": "inf",
+        "CPI_Combined_Index": "inf",
+        "CPI_Inflation_Rate": "inf",
+        "WPI": "inf",
+        "Repo_Rate": "inf",
+        "Reverse_Repo_Rate": "inf",
+        "oil_price": "inf",
+        "exchange_rate": "inf",
+        "Quarter_Q2": "inf",
+        "Quarter_Q3": "inf",
+        "CPI_Combined_Index_lag1": "inf",
+        "CPI_Combined_Index_lag4": "inf",
+        "CPI_Inflation_Rate_lag1": "inf",
+        "CPI_Inflation_Rate_lag4": "inf",
+        "WPI_lag1": "inf",
+        "WPI_lag4": "inf",
+        "Repo_Rate_lag1": "inf",
+        "Repo_Rate_lag4": "inf",
+        "Reverse_Repo_Rate_lag1": "inf",
+        "Reverse_Repo_Rate_lag4": "inf",
+        "oil_price_lag1": "inf",
+        "oil_price_lag4": "inf",
+        "exchange_rate_lag1": "inf",
+        "exchange_rate_lag4": "inf",
+        "oil_x_sales": "inf",
+        "cpi_infl_x_sales": "inf",
+        "fx_x_sales": "inf",
+        "Sales_lag1": 264917625139440.94,
+        "Sales_lag4": 264917625139440.94,
+        "Sales_lag2": 243437817695702.5,
+        "Expenses": 214457125112880.75,
+        "Expenses_lag4": 214457125112880.75,
+        "Expenses_lag1": 209469750110255.62,
+        "Expenses_lag2": 191642537334914.72,
+        "CFO_lag1": 15087435937589.6,
+        "CFO": 14765900417608.18,
+        "CFO_lag2": 14297141674192.05,
+        "CFO_lag4": 12997401521992.77,
+        "CFI_lag1": 5123549064130.26,
+        "CFI": 5094569714220.02,
+        "Operating Profit": 5046050002656.02,
+        "Operating Profit_lag1": 4808969169642.81,
+        "CFI_lag2": 4657290204105.99,
+        "Operating Profit_lag4": 4628571045601.74,
+        "Operating Profit_lag2": 4363953127296.99,
+        "CFI_lag4": 4189395002205.11,
+        "Net Cash Flow_lag1": 1266835338219.55,
+        "Net Cash Flow_lag2": 1248572117374.69,
+        "Net Cash Flow": 1236403466676.87,
+        "Net Cash Flow_lag4": 1035191271663.14,
+        "CFF_lag1": 778226996262.4,
+        "CFF_lag2": 750412334811.38,
+        "CFF": 747361371949.97,
+        "CFF_lag4": 664737952379.41,
+        "Total Assets": 207320.47,
+        "repo_x_total_assets": 148693.51,
+        "Sales_roll4_mean": 133652.08,
+        "Borrowings": 133231.49,
+        "repo_x_borrowings": 132428.58,
+        "Sales_roll4_median": 37806.69,
+        "Total Assets_lag4": 20234.68,
+        "Total Assets_lag1": 17371.54,
+        "Total Assets_roll4_mean": 15785.8,
+        "Total Liabilities": 14425.64,
+        "Total Assets_lag2": 9076.8,
+        "Borrowings_roll4_mean": 8045.8,
+        "Equity": 7396.89,
+        "Total Liabilities_lag4": 6701.52,
+        "Total Assets_roll4_median": 6463.79,
+        "Operating Profit_roll4_mean": 6358.58,
+        "Total Liabilities_lag1": 6319.65,
+        "CFO_roll4_mean": 3925.02,
+        "Equity_lag4": 3789.24,
+        "Equity_lag1": 3104.51,
+        "Net Profit_roll4_mean": 2930.1,
+        "Total Liabilities_lag2": 2767.36,
+        "Borrowings_roll4_median": 2360.22,
+        "Operating Profit_roll4_median": 1929.59,
+        "Equity_lag2": 1442.44,
+        "CFO_roll4_median": 1402.67,
+        "Net Profit_roll4_median": 980.06,
+        "Borrowings_lag1": 838.71,
+        "Borrowings_lag2": 771.81,
+        "Borrowings_lag4": 704.1,
+        "Net Profit_lag2": 455.46,
+        "Net Profit_lag1": 426.21,
+        "Net Profit_lag4": 297.37,
+        "Net Profit": 175.37,
+        "Operating Profit_yoy_growth": 25.83,
+        "Net Profit_yoy_growth": 18.49,
+        "Operating Profit_qoq_growth": 17.41,
+        "Operating Profit_qoq_growth_lag1": 15.56,
+        "Sales_yoy_growth": 15.03,
+        "CFO_yoy_growth": 14.03,
+        "Operating Profit_roll4_growth": 11.99,
+        "Net Profit_qoq_growth": 11.36,
+        "Net Profit_qoq_growth_lag1": 10.87,
+        "Net Profit_roll4_growth": 10.73
+      }
+    },
+    "dropped_features": [
+      "is_Q4"
+    ],
+    "drop_reasons": {
+      "is_Q4": "exact duplicate of Quarter_Q4"
+    },
+    "retained_features": [
+      "Sales",
+      "Expenses",
+      "Operating Profit",
+      "Net Profit",
+      "Total Assets",
+      "Equity",
+      "Borrowings",
+      "Total Liabilities",
+      "CFO",
+      "CFI",
+      "CFF",
+      "Net Cash Flow",
+      "CPI_Combined_Index",
+      "CPI_Inflation_Rate",
+      "WPI",
+      "Repo_Rate",
+      "Reverse_Repo_Rate",
+      "oil_price",
+      "exchange_rate",
+      "Quarter_Q1",
+      "Quarter_Q2",
+      "Quarter_Q3",
+      "Quarter_Q4",
+      "Sales_lag1",
+      "Sales_lag2",
+      "Sales_lag4",
+      "Expenses_lag1",
+      "Expenses_lag2",
+      "Expenses_lag4",
+      "Operating Profit_lag1",
+      "Operating Profit_lag2",
+      "Operating Profit_lag4",
+      "Net Profit_lag1",
+      "Net Profit_lag2",
+      "Net Profit_lag4",
+      "Total Assets_lag1",
+      "Total Assets_lag2",
+      "Total Assets_lag4",
+      "Equity_lag1",
+      "Equity_lag2",
+      "Equity_lag4",
+      "Borrowings_lag1",
+      "Borrowings_lag2",
+      "Borrowings_lag4",
+      "Total Liabilities_lag1",
+      "Total Liabilities_lag2",
+      "Total Liabilities_lag4",
+      "CFO_lag1",
+      "CFO_lag2",
+      "CFO_lag4",
+      "CFI_lag1",
+      "CFI_lag2",
+      "CFI_lag4",
+      "CFF_lag1",
+      "CFF_lag2",
+      "CFF_lag4",
+      "Net Cash Flow_lag1",
+      "Net Cash Flow_lag2",
+      "Net Cash Flow_lag4",
+      "CPI_Combined_Index_lag1",
+      "CPI_Combined_Index_lag4",
+      "CPI_Inflation_Rate_lag1",
+      "CPI_Inflation_Rate_lag4",
+      "WPI_lag1",
+      "WPI_lag4",
+      "Repo_Rate_lag1",
+      "Repo_Rate_lag4",
+      "Reverse_Repo_Rate_lag1",
+      "Reverse_Repo_Rate_lag4",
+      "oil_price_lag1",
+      "oil_price_lag4",
+      "exchange_rate_lag1",
+      "exchange_rate_lag4",
+      "Sales_roll4_mean",
+      "Sales_roll4_median",
+      "Sales_roll4_std",
+      "Sales_roll4_growth",
+      "Operating Profit_roll4_mean",
+      "Operating Profit_roll4_median",
+      "Operating Profit_roll4_std",
+      "Operating Profit_roll4_growth",
+      "Net Profit_roll4_mean",
+      "Net Profit_roll4_median",
+      "Net Profit_roll4_std",
+      "Net Profit_roll4_growth",
+      "Borrowings_roll4_mean",
+      "Borrowings_roll4_median",
+      "Borrowings_roll4_std",
+      "Borrowings_roll4_growth",
+      "Total Assets_roll4_mean",
+      "Total Assets_roll4_median",
+      "Total Assets_roll4_std",
+      "Total Assets_roll4_growth",
+      "CFO_roll4_mean",
+      "CFO_roll4_median",
+      "CFO_roll4_std",
+      "CFO_roll4_growth",
+      "Sales_qoq_growth",
+      "Sales_yoy_growth",
+      "Sales_qoq_growth_lag1",
+      "Operating Profit_qoq_growth",
+      "Operating Profit_yoy_growth",
+      "Operating Profit_qoq_growth_lag1",
+      "Net Profit_qoq_growth",
+      "Net Profit_yoy_growth",
+      "Net Profit_qoq_growth_lag1",
+      "Borrowings_qoq_growth",
+      "Borrowings_yoy_growth",
+      "Borrowings_qoq_growth_lag1",
+      "Total Assets_qoq_growth",
+      "Total Assets_yoy_growth",
+      "Total Assets_qoq_growth_lag1",
+      "CFO_qoq_growth",
+      "CFO_yoy_growth",
+      "CFO_qoq_growth_lag1",
+      "repo_x_borrowings",
+      "repo_x_total_assets",
+      "oil_x_sales",
+      "cpi_infl_x_sales",
+      "fx_x_sales"
+    ],
+    "n_features_out": 120,
+    "policy": {
+      "drop_constant": true,
+      "drop_exact_duplicates": true,
+      "auto_drop_high_correlation": false,
+      "note": "High-correlation / high-VIF features are RETAINED \u2014 they carry accounting meaning; trees are robust and linear models regularize."
+    }
+  }
+}
